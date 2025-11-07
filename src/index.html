@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://i.postimg.cc/9fqYVvxh/logo.png" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <aside class="sidebar " data-sidebar>
+            <div class="sidebar-info">
+                <figure class="avatar-box">
+                    <img class="memoji" src="/Media/Memoji.png" alt="avatar" width="80">
+                </figure>
+                <div class="info-content">
+                    <h1 class="name" title="Nicola Nespoli">Nicola Nespoli</h1>
+                    <p class="title">Acoustic Engineering Student</p>
+                </div>
+                <button class="info-more-btn" data-sidebar-btn>
+                    <span>Show Contacts</span>
+                    <ion-icon name="chevron-down"></ion-icon>
+                </button>
+            </div>
+            <div class="sidebar-info-more">
+                <div class="separator"></div>
+                <ul class="contacts-list">
+                    <li class="contact-item">
+                        <div class="icon-box"><ion-icon name="mail-outline"></ion-icon></div>
+                        <div class="contact-info">
+                            <p class="contact-title">Email</p>
+                            <a href="mailto:nespolinicola5@gmail.com" class="contact-link">nespolinicola5@gmail.com</a>
+                        </div>
+                    </li>
+                    <li class="contact-item">
+                        <div class="icon-box"><ion-icon name="phone-portrait-outline"></ion-icon></div>
+                        <div class="contact-info">
+                            <p class="contact-title">Phone</p>
+                            <a href="tel:(+39) 347 186 6943" class="contact-link">(+39) 347 186 6943</a>
+                        </div>
+                    </li>
+                    <li class="contact-item">
+                        <div class="icon-box"><ion-icon name="calendar-outline"></ion-icon></div>
+                        <div class="contact-info">
+                            <p class="contact-title">Birthday</p>
+                            <time datetime="2002-11-21">November 21, 2002</time>
+                        </div>
+                    </li>
+                    <li class="contact-item">
+                        <div class="icon-box"><ion-icon name="location-outline"></ion-icon></div>
+                        <div class="contact-info">
+                            <p class="contact-title">Location</p>
+                            <address>Lodi, Lombardia, Italy</address>
+                        </div>
+                    </li>
+                </ul>
+                <div class="separator"></div>
+                <ul class="social-list">
+                    <li class="social-item">
+                        <a href="https://www.linkedin.com/in/nicola-nespoli-1ba6a7151" class="social-link" target="_blank" rel="noopener noreferrer">
+                            <ion-icon name="logo-linkedin"></ion-icon>
+                        </a>
+                    </li>
+                    <li class="social-item">
+                        <a href="https://www.instagram.com/nicola_nespoli" class="social-link" target="_blank" rel="noopener noreferrer">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <div class="main-content">
+            <nav class="navbar">
+                <ul class="navbar-list">
+                    <li class="navbar-item"><button class="navbar-link active" data-nav-link>About</button></li>
+                    <li class="navbar-item"><button class="navbar-link" data-nav-link>Resume</button></li>
+                    <li class="navbar-item"><button class="navbar-link" data-nav-link>Portfolio</button></li>
+                    <li class="navbar-item"><button class="navbar-link" data-nav-link>Contact</button></li>
+                </ul>
+            </nav>
+            <article class="about active" data-page="about">
+                <header>
+                    <h2 class="h2 article-title">About me</h2>
+                </header>
+                <section class="about-text">
+                    <p>I'm Nicola Nespoli, an Acoustic Engineering student at Politecnico di Milano. I love exploring the intersection of sound, technology, and creativity. My interest is focused on finding innovative solutions to real-life acoustic problems, from room acoustics to audio signal processing.</p>
+                    <p>I combine technical knowledge with curiosity, always striving to improve my skills in both scientific research and practical engineering. My goal is to bring innovation in the sound industry so that peopla can play, listen and create music in new and better ways</p>
+                </section>
+                <section class="service">
+                    <h3 class="h3 service-title">What I'm studying & exploring</h3>
+                    <ul class="service-list">
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                            <img src="/Media/Phonometer.png" alt="icon" width="40">
+                            </div>
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Acoustic Measurements</h4>
+                                <p class="service-item-text">Learning and applying techniques to measure room acoustics, sound quality, and spatial audio properties.</p>
+                            </div>
+                        </li>
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <img src="/Media/DSP.png" alt="icon" width="40">
+                            </div>
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Digital Signal Processing</h4>
+                                <p class="service-item-text">Developing algorithms and tools for audio analysis, filtering, and real-time sound processing.</p>
+                            </div>
+                        </li>
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <img src="/Media/MIR.png" alt="icon" width="40">
+                            </div>
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Music Information Retrieval</h4>
+                                <p class="service-item-text">Exploring automatic music analysis, genre classification, and audio feature extraction using machine learning.</p>
+                            </div>
+                        </li>
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <img src="/Media/Creative Programming.png" alt="icon" width="40">
+                            </div>
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Creative Audio Programming</h4>
+                                <p class="service-item-text">Building interactive sound applications, synthesizers, and audio plugins with Python, C++, and Supercollider.</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                </section>
+            </article>
+            <article class="resume " data-page="resume">
+                <header>
+                    <h2 class="h2 article-title">Resume</h2>
+                </header>
+                <section class="timeline">
+                    <div class="title-wrapper">
+                        <div class="icon-box"><ion-icon name="book-outline"></ion-icon></div>
+                        <h3 class="h3">Education</h3>
+                    </div>
+                    <ol class="timeline-list">
+                        <li class="timeline-item">
+                            <h4 class="h4 timeline-item-title">Politecnico di Milano</h4>
+                            <span>2024 - Present</span>
+                            <p class="timeline-text">MSc in Acoustic Engineering. Courses in sound physics, electroacoustics, digital signal processing, creative programming, AI applications for music.</p>
+                        </li>
+                        <li class="timeline-item">
+                            <h4 class="h4 timeline-item-title">Politecnico di Milano</h4>
+                            <span>2021 - 2024</span>
+                            <p class="timeline-text">BSc in Automation and Control Engineering. Courses in mathematics, physics, control theory, industrial Engineering.</p>
+                        </li>
+                        <li class="timeline-item">
+                            <h4 class="h4 timeline-item-title">Liceo Scientifico</h4>
+                            <span>2016 - 2021</span>
+                            <p class="timeline-text">High school with specialization in mathematics and physics. Strong foundation in STEM subjects.</p>
+                        </li>
+                    </ol>
+                </section>
+                <section class="timeline">
+                    <div class="title-wrapper">
+                        <div class="icon-box"><ion-icon name="book-outline"></ion-icon></div>
+                        <h3 class="h3">Experience</h3>
+                    </div>
+                    <ol class="timeline-list">
+                        <li class="timeline-item">
+                            <h4 class="h4 timeline-item-title">Sound Engineer</h4>
+                            <span>2024</span>
+                            <p class="timeline-text"> Recording, Mixing and Mastering a suite of liturgical chants for Edizioni Paoline</p>
+                        </li>
+                        <li class="timeline-item">
+                            <h4 class="h4 timeline-item-title">Music Producer</h4>
+                            <span>2024 - Present</span>
+                            <p class="timeline-text">
+                                Produced, mixed, and mastered tracks for 
+                                <a href="https://open.spotify.com/intl-it/artist/3kfI04iC8lA53MbRp9l7bB?si=b89uXSKdQ2m5qnzfv-NhaA" target="_blank" rel="noopener noreferrer" style="color: white; text-decoration: underline">my band.</a>
+                            </p>
+                        </li>
+                        </ol>
+                </section>
+                <section class="skill">
+                <h3 class="h3 skills-title">My Skills</h3>
+                <ul class="skills-list content-card">
+                    <li class="skills-item">Acoustic Measurements</li>
+                    <li class="skills-item">Digital Signal Processing</li>
+                    <li class="skills-item">Music Production</li>
+                    <li class="skills-item">Programming: <span class="subskills">Python: Librosa, Numpy, Scipy, Tensorflow, Keras. Matlab, C++ (Juce), Supercollider.</span></li>
+                </ul>
+                </section>
+
+
+
+                
+
+            </article>
+            <article class="portfolio " data-page="portfolio">
+                <header>
+                    <h2 class="h2 article-title">Portfolio</h2>
+                </header>
+                <section class="projects">
+                    <ul class="filter-list">
+                        <li class="filter-item"><button class="active" data-filter-btn>All</button></li>
+                        <li class="filter-item"><button data-filter-btn>Creative Programming</button></li>
+                        <li class="filter-item"><button data-filter-btn>Digital Signal Processing</button></li>
+                        <li class="filter-item"><button data-filter-btn>Music Information Retrieval</button></li>
+                    </ul>
+                    <div class="filter-select-box">
+                        <button class="filter-select " data-select>
+                            <div class="select-value" data-select-value>Select Category</div>
+                            <div class="select-icon">
+                                <ion-icon name="chevron-down"></ion-icon>
+                            </div>
+                        </button>
+                        <ul class="select-list">
+                            <li class="select-item"><button data-select-item>All</button></li>
+                            <li class="select-item"><button data-select-item>Creative Programming</button></li>
+                            <li class="select-item"><button data-select-item>Digital Signal Processing</button></li>
+                            <li class="select-item"><button data-select-item>Music Information Retrieval</button></li>
+                        </ul>
+                    </div>
+                    <ul class="project-list">
+                        <li class="project-item active" data-filter-item data-category="Creative Programming">
+                            <a href="https://github.com/zabayone/Actam_Project">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                                    <img src="/Media/Earbuddy.png" alt="Ear Buddy" loading="lazy">
+                                </figure>
+                                <h3 class="project-title">Ear Buddy - Ear and vocal training website</h3>
+                                <p class="project-category">Creative Programming</p>
+                            </a>
+                        </li>
+                        <li class="project-item active" data-filter-item data-category="Creative Programming,Digital Signal Processing">
+                            <a href="https://github.com/zabayone/International-Love">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                                    <img src="/Media/International Love Board.jpg" alt="T.I.L.E.S." loading="lazy">
+                                </figure>
+                                <h3 class="project-title">T.I.L.E.S. </h3>
+                                <p class="project-category">Creative Programming</p> 
+                                <p class="project-category">Digital Signal Processing</p>
+                            </a>
+                        </li>
+                        <li class="project-item active" data-filter-item data-category="Music Information Retrieval">
+                            <a href="https://github.com/zabayone/STMAE-final-project">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                                    <img src="/Media/Stmae.png" alt="Signal Analyzer App" loading="lazy">
+                                </figure>
+                                <h3 class="project-title">ST Final project</h3>
+                                <p class="project-category">Music Information Retrieval</p>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </article>
+            <article class="contact " data-page="contact">
+                <header>
+                    <h2 class="h2 article-title">Contact</h2>
+                </header>
+                <section class="mapbox" data-mapbox>
+                    <figure>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.783355961679!2d9.511093575853797!3d45.314012471073735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4781206facbeab83%3A0xf0c6ee91a9c2ea38!2sLodi,%20Italy!5e0!3m2!1sen!2sit!4v1701000000000!5m2!1sen!2sit"
+                            width="400" height="300" loading="lazy"></iframe>
+                    </figure>
+                </section>
+                <section class="contact-form">
+                    <h3 class="h3 form-title">Contact Form</h3>
+                    <form action="#" class="form" data-form>
+                        <div class="input-wrapper">
+                            <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+                            <input type="email" name="email" class="form-input" placeholder="Email Address" required data-form-input>
+                        </div>
+                        <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+                        <button class="form-btn" type="submit" disabled data-form-btn>
+                            <ion-icon name="paper-plane"></ion-icon>
+                            <span>Send Message</span>
+                        </button>
+                    </form>
+                </section>
+            </article>
+        </div>
+    </main>
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
