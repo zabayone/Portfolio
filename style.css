@@ -141,7 +141,6 @@ body.light-mode {
     transition: var(--transition1);
 }
 
-
 main {
     margin: 15px 12px;
     margin-bottom: 75px;
@@ -1606,4 +1605,9 @@ textarea.form-input {
     .social-list { justify-content: center; }
 
     .timeline-text { max-width: 700px; }
+
+    .theme-toggle-btn {
+    right: -10px;
+    top: -40px;
+}
 }
