@@ -109,3 +109,27 @@ for(let i = 0; i < navigationLinks.length; i++) {
         }
     });
 }
+
+// Theme Toggle Functionality
+const themeToggleBtn = document.querySelector('[data-theme-toggle]');
+const themeIcon = document.querySelector('.theme-icon');
+
+// Controlla se c'è una preferenza salvata
+const currentTheme = localStorage.getItem('theme');
+if (currentTheme === 'light') {
+    document.body.classList.add('light-mode');
+    themeIcon.name = 'sunny-outline';
+}
+
+themeToggleBtn.addEventListener('click', function() {
+    document.body.classList.toggle('light-mode');
+
+  // Cambia l'icona
+    if (document.body.classList.contains('light-mode')) {
+    themeIcon.name = 'sunny-outline';
+    localStorage.setItem('theme', 'light');
+    } else {
+    themeIcon.name = 'moon-outline';
+    localStorage.setItem('theme', 'dark');
+    }
+});
