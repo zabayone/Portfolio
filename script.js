@@ -1,3 +1,5 @@
+// Original design: https://codepen.io/leonam-silva-de-souza/pen/vYowKqP
+
 'use strict';
 
 //Opening or closing side bar
