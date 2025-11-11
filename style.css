@@ -98,7 +98,7 @@ html {
 }
 
 body {min-height: 105vh;
-    background-image: url('/Media/wallpaper-dark.png');
+    background-image: url('https://github.com/zabayone/Portfolio/blob/03fffa7a01c4f2475c1086c3cc2bbbc2a0086586/Media/wallpaper-dark.png?raw=true');
     /* Fallback */ background-color: var(--smoky-black);
     background-size: cover;
     background-attachment: fixed;
