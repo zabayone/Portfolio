@@ -112,6 +112,25 @@ for(let i = 0; i < navigationLinks.length; i++) {
     });
 }
 
+// Video Player Functionality
+const videoContainers = document.querySelectorAll('.video-container');
+
+videoContainers.forEach(function(container) {
+    const video = container.querySelector('.project-video');
+    const placeholder = container.querySelector('.video-placeholder');
+    const playBtn = container.querySelector('.play-btn');
+    
+    if (playBtn && video) {
+        playBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            video.classList.remove('hidden');
+            video.classList.add('show');
+            placeholder.classList.add('hidden');
+            video.play();
+        });
+    }
+});
+
 // Theme Toggle Functionality
 const themeToggleBtn = document.querySelector('[data-theme-toggle]');
 const themeIcon = document.querySelector('.theme-icon');

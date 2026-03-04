@@ -928,6 +928,32 @@ article { display: none; }
 
     .project-item-icon-box ion-icon { --ionicon-stroke-width: 50px; }
 
+/* Video Player Styles */
+.project-video {
+    width: 100%;
+    height: 175px;
+    object-fit: cover;
+    border-radius: 16px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.project-video.hidden {
+    display: none;
+}
+
+.project-video.show {
+    display: block;
+}
+
+.video-placeholder.hidden {
+    display: none;
+}
+
+.play-btn {
+    cursor: pointer;
+}
+
 .project-title, .project-category { margin-left: 10px; }
 
     .project-title {
