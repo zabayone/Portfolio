@@ -837,6 +837,10 @@ article { display: none; }
         pointer-events: all;
     }
 
+.select-list:first-child {
+    border-radius: 8px 8px 0 0;
+}
+
 .select-item button {
     background: var(--eerie-black2);
     color: var(--light-gray);
@@ -845,10 +849,9 @@ article { display: none; }
     text-transform: capitalize;
     width: 100%;
     padding: 8px 10px;
-    border-radius: 8px;
 }
 
-    .select-item button:hover { --eerie-black2: hsl(240, 2%, 20%); }
+    .select-item button:hover { background: hsl(240, 2%, 20%); }
 
 .project-list {
     display: grid;
@@ -873,7 +876,7 @@ article { display: none; }
 
 .project-img {
     width: 100%;
-    height: 175px; 
+    height: 250px; 
     overflow: hidden;
     border-radius: 16px;
     position: relative;
