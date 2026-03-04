@@ -281,15 +281,32 @@
                         <li class="project-item active" data-filter-item data-category="Sound Design">
                             <a class="video-container">
                                 <div style="position: relative; width: 100%; max-width: 640px; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-                                    <iframe 
-                                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" 
-                                        src="https://www.youtube.com/embed/wJQDhbMxOgw?playsinline=1&mute=0&modestbranding=1&rel=0&showinfo=0" 
-                                        title="YouTube video player" 
-                                        frameborder="0" 
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" 
-                                        referrerpolicy="strict-origin-when-cross-origin" 
-                                        loading="lazy"
-                                        class="project-video">
+                                    <!-- FALLBACK: Thumbnail cliccabile -->
+                                    <a href="https://www.youtube.com/watch?v=wJQDhbMxOgw" 
+                                       class="yt-thumbnail"
+                                       target="_blank" 
+                                       style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: block; background: #000; cursor: pointer;"
+                                       onclick="if(window.innerWidth > 768) { event.preventDefault(); loadYouTubeIframe(event); } else { return true; }">
+                                        <!-- Thumbnail YouTube (maxres o hq) -->
+                                        <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/MPT.png" 
+                                             alt="Music Production Demo" 
+                                             style="width: 100%; height: 100%; object-fit: cover;">
+                                        <!-- Play button overlay -->
+                                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); 
+                                                    width: 68px; height: 48px; background: rgba(255,255,255,0.9); 
+                                                    border-radius: 4px; display: flex; align-items: center; justify-content: center; 
+                                                    font-size: 30px; color: #FF0000;">▶</div>
+                                    </a>
+                                    
+                                    <!-- IFRAME nascosto, si attiva solo se supportato -->
+                                    <iframe id="yt-player" 
+                                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: none; border: none;" 
+                                            src="https://www.youtube.com/embed/wJQDhbMxOgw?playsinline=1&rel=0&modestbranding=1" 
+                                            title="Music Production Demo" 
+                                            frameborder="0" 
+                                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
+                                            loading="lazy"
+                                            class="project-video">
                                     </iframe>
                                 </div>
                                 <h3 class="project-title">Music Production Technologies - Final Project</h3>
@@ -329,5 +346,18 @@
     <script src="script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        function loadYouTubeIframe(event) {
+            const thumb = event.currentTarget;
+            const container = thumb.closest('[style*="position: relative"]');
+            const iframe = container.querySelector('#yt-player');
+            
+            if (iframe) {
+                thumb.style.display = 'none';
+                iframe.style.display = 'block';
+                iframe.src += '&autoplay=1';
+            }
+        }
+    </script>
 </body>
 </html>
