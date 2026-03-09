@@ -154,3 +154,78 @@ themeToggleBtn.addEventListener('click', function() {
     localStorage.setItem('theme', 'dark');
     }
 });
+
+/* ===== PROJECT ARTICLES MODAL ===== */
+
+const projectOpenButtons = document.querySelectorAll("[data-open-project]");
+const projectModalContainer = document.querySelector("[data-project-modal-container]");
+const projectOverlay = document.querySelector("[data-project-overlay]");
+const projectCloseBtn = document.querySelector("[data-project-close-btn]");
+const projectModalContent = document.getElementById("project-modal-content");
+
+if (projectOpenButtons.length && projectModalContainer && projectOverlay && projectCloseBtn && projectModalContent) {
+  const openProjectModal = (projectId) => {
+    const template = document.getElementById(`project-${projectId}`);
+    if (!template) return;
+
+    projectModalContent.innerHTML = "";
+    projectModalContent.appendChild(template.content.cloneNode(true));
+    projectModalContainer.classList.add("active");
+    document.body.style.overflow = "hidden";
+  };
+
+  const closeProjectModal = () => {
+    projectModalContainer.classList.remove("active");
+    projectModalContent.innerHTML = "";
+    document.body.style.overflow = "";
+  };
+
+  projectOpenButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      openProjectModal(button.dataset.openProject);
+    });
+  });
+
+  projectCloseBtn.addEventListener("click", closeProjectModal);
+  projectOverlay.addEventListener("click", closeProjectModal);
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && projectModalContainer.classList.contains("active")) {
+      closeProjectModal();
+    }
+  });
+}
+
+// Funzione per aggiornare le immagini in base al tema
+const updateProjectImages = () => {
+  const isDark = !document.body.classList.contains('light-mode');
+  document.querySelectorAll('.project-img img').forEach(img => {
+    if (isDark) {
+      // Aggiunge _dark se non c'è già
+      if (!img.src.includes('_dark')) {
+        img.src = img.src.replace(/\.png$/i, '_dark.png');
+      }
+    } else {
+      // Rimuove _dark
+      img.src = img.src.replace('_dark.png', '.png');
+    }
+  });
+};
+
+// Theme toggle aggiornato
+themeToggleBtn.addEventListener('click', function () {
+  document.body.classList.toggle('light-mode');
+
+  if (document.body.classList.contains('light-mode')) {
+    themeIcon.name = 'sunny-outline';
+    localStorage.setItem('theme', 'light');
+  } else {
+    themeIcon.name = 'moon-outline';
+    localStorage.setItem('theme', 'dark');
+  }
+
+  updateProjectImages(); // ← aggiorna le immagini al toggle
+});
+
+// Applica anche al caricamento pagina (rispetta la preferenza salvata)
+updateProjectImages();

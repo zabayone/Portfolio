@@ -9,6 +9,9 @@
     <link rel="shortcut icon" href="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/Memoji.png" type="image/x-icon">
 </head>
 <body>
+    <div class="bg-blob bg-blob--1" aria-hidden="true"></div>
+    <div class="bg-blob bg-blob--2" aria-hidden="true"></div>
+    <div class="bg-blob bg-blob--3" aria-hidden="true"></div>
     <main>
         <aside class="sidebar " data-sidebar>
             <div class="sidebar-info">
@@ -197,11 +200,15 @@
                 
                 
             </article>
-            <article class="portfolio " data-page="portfolio">
+            <!-- PORTFOLIO -->
+            <article class="portfolio" data-page="portfolio">
+            
                 <header>
                     <h2 class="h2 article-title">Portfolio</h2>
                 </header>
+            
                 <section class="projects">
+            
                     <ul class="filter-list">
                         <li class="filter-item"><button class="active" data-filter-btn>All</button></li>
                         <li class="filter-item"><button data-filter-btn>Creative Programming</button></li>
@@ -210,13 +217,15 @@
                         <li class="filter-item"><button data-filter-btn>Acoustics</button></li>
                         <li class="filter-item"><button data-filter-btn>Sound Design</button></li>
                     </ul>
+            
                     <div class="filter-select-box">
-                        <button class="filter-select " data-select>
-                            <div class="select-value" data-select-value>Select Category</div>
+                        <button class="filter-select" data-select>
+                            <div class="select-value" data-select-value>Select category</div>
                             <div class="select-icon">
                                 <ion-icon name="chevron-down"></ion-icon>
                             </div>
                         </button>
+            
                         <ul class="select-list">
                             <li class="select-item"><button data-select-item>All</button></li>
                             <li class="select-item"><button data-select-item>Creative Programming</button></li>
@@ -226,81 +235,416 @@
                             <li class="select-item"><button data-select-item>Sound Design</button></li>
                         </ul>
                     </div>
+            
                     <ul class="project-list">
+                    
                         <li class="project-item active" data-filter-item data-category="Creative Programming">
-                            <a href="https://github.com/zabayone/Actam_Project">
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
-                                    <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/eb.jpg" alt="Ear Buddy" loading="lazy">
-                                </figure>
-                                <h3 class="project-title">Ear Buddy - Ear and vocal training website</h3>
+                            <div class="project-card">
+                                <button class="project-image-btn" data-open-project="earbuddy" type="button">
+                                    <figure class="project-img">
+                                        <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                                        <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/eb_dark.png" alt="Ear Buddy"
+                                            loading="lazy">
+                                    </figure>
+                                </button>
+                                <div class="project-header">
+                                    <h3 class="project-title">Ear Buddy - Ear and vocal training website</h3>
+                                    <a class="project-link-btn" href="https://github.com/zabayone/Actam_Project" target="_blank"
+                                        rel="noopener noreferrer"><ion-icon name="link-outline"></ion-icon></a>
+                                </div>
                                 <p class="project-category">Creative Programming</p>
-                            </a>
+                            </div>
                         </li>
+                    
                         <li class="project-item active" data-filter-item data-category="Creative Programming,Digital Signal Processing">
-                            <a href="https://github.com/zabayone/International-Love">
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
-                                    <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/tiles.jpg" alt="T.I.L.E.S." loading="lazy">
-                                </figure>
-                                <h3 class="project-title">T.I.L.E.S. - Tangible Interface for Layered Electronic Sounds</h3>
-                                <p class="project-category">Creative Programming</p> 
+                            <div class="project-card">
+                                <button class="project-image-btn" data-open-project="tiles" type="button">
+                                    <figure class="project-img">
+                                        <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                                        <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/tiles_dark.png"
+                                            alt="T.I.L.E.S." loading="lazy">
+                                    </figure>
+                                </button>
+                                <div class="project-header">
+                                    <h3 class="project-title">T.I.L.E.S. - Tangible Interface for Layered Electronic Sounds</h3>
+                                    <a class="project-link-btn" href="https://github.com/zabayone/International-Love" target="_blank"
+                                        rel="noopener noreferrer"><ion-icon name="link-outline"></ion-icon></a>
+                                </div>
+                                <p class="project-category">Creative Programming</p>
                                 <p class="project-category">Digital Signal Processing</p>
-                            </a>
+                            </div>
                         </li>
+                    
                         <li class="project-item active" data-filter-item data-category="Music Information Retrieval">
-                            <a href="https://github.com/zabayone/STMAE-final-project">
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
-                                    <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/stmae.jpg" alt="STMAE Final Project" loading="lazy">
-                                </figure>
-                                <h3 class="project-title">STMAE - Final project</h3>
+                            <div class="project-card">
+                                <button class="project-image-btn" data-open-project="stmae" type="button">
+                                    <figure class="project-img">
+                                        <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                                        <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/stmae_dark.png" alt="STMAE"
+                                            loading="lazy">
+                                    </figure>
+                                </button>
+                                <div class="project-header">
+                                    <h3 class="project-title">STMAE - Final project</h3>
+                                    <a class="project-link-btn" href="https://github.com/zabayone/STMAE-final-project" target="_blank"
+                                        rel="noopener noreferrer"><ion-icon name="link-outline"></ion-icon></a>
+                                </div>
                                 <p class="project-category">Music Information Retrieval</p>
-                            </a>
+                            </div>
                         </li>
+                    
                         <li class="project-item active" data-filter-item data-category="Acoustics">
-                            <a href="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/RoomAcoustics.pdf">
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box"><ion-icon name="cloud-download-outline"></ion-icon></div>
-                                    <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/roomac.jpg" alt="Room Acoustics Project" loading="lazy">
-                                </figure>
-                                <h3 class="project-title">Room Acoustics - Final Projects</h3>
+                            <div class="project-card">
+                                <button class="project-image-btn" data-open-project="roomacoustics" type="button">
+                                    <figure class="project-img">
+                                        <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                                        <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/roomac_dark.png"
+                                            alt="Room Acoustics" loading="lazy">
+                                    </figure>
+                                </button>
+                                <div class="project-header">
+                                    <h3 class="project-title">Room Acoustics - Final Projects</h3>
+                                    <a class="project-link-btn"
+                                        href="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/RoomAcoustics.pdf"
+                                        target="_blank" rel="noopener noreferrer"><ion-icon name="link-outline"></ion-icon></a>
+                                </div>
                                 <p class="project-category">Acoustics</p>
-                            </a>
+                            </div>
                         </li>
+                    
                         <li class="project-item active" data-filter-item data-category="Sound Design">
-                            <a href="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/ElectroacousticComposition.zip">
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box"><ion-icon name="cloud-download-outline"></ion-icon></div>
-                                    <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/etrcomp.jpg" alt="Electroacoustic Composition Project" loading="lazy">
-                                </figure>
-                                <h3 class="project-title">Electroacoustic Composition - Final Project</h3>
+                            <div class="project-card">
+                                <button class="project-image-btn" data-open-project="electroacoustic" type="button">
+                                    <figure class="project-img">
+                                        <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                                        <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/etrcomp_dark.png"
+                                            alt="Electroacoustic Composition" loading="lazy">
+                                    </figure>
+                                </button>
+                                <div class="project-header">
+                                    <h3 class="project-title">Electroacoustic Composition - Final Project</h3>
+                                    <a class="project-link-btn"
+                                        href="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/ElectroacousticComposition.zip"
+                                        target="_blank" rel="noopener noreferrer"><ion-icon name="link-outline"></ion-icon></a>
+                                </div>
                                 <p class="project-category">Sound Design</p>
-                            </a>
+                            </div>
                         </li>
+                    
                         <li class="project-item active" data-filter-item data-category="Sound Design">
-                            <a href="https://www.youtube.com/watch?v=wJQDhbMxOgw" target="_blank" rel="noopener noreferrer">
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box"><ion-icon name="play-outline"></ion-icon></div>
-                                    <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/etc.jpg" alt="Music Production Demo" loading="lazy">
-                                </figure>
-                                <h3 class="project-title">Music Production Technologies - Final Project</h3>
+                            <div class="project-card">
+                                <button class="project-image-btn" data-open-project="mpt" type="button">
+                                    <figure class="project-img">
+                                        <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                                        <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/mpt_dark.png"
+                                            alt="Music Production Technologies" loading="lazy">
+                                    </figure>
+                                </button>
+                                <div class="project-header">
+                                    <h3 class="project-title">Music Production Technologies - Final Project</h3>
+                                    <a class="project-link-btn" href="https://www.youtube.com/watch?v=wJQDhbMxOgw" target="_blank"
+                                        rel="noopener noreferrer"><ion-icon name="link-outline"></ion-icon></a>
+                                </div>
                                 <p class="project-category">Sound Design</p>
-                            </a>
+                            </div>
                         </li>
+                    
                         <li class="project-item active" data-filter-item data-category="Creative Programming, Music Information Retrieval">
-                            <a href="https://github.com/zabayone/EmotionsToColor"></a>
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
-                                    <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/e2c.png" alt="" loading="lazy">
-                                </figure>
-                                <h3 class="project-title">Emotions to Color - Palette generator</h3>
+                            <div class="project-card">
+                                <button class="project-image-btn" data-open-project="emotions" type="button">
+                                    <figure class="project-img">
+                                        <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                                        <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/etc_dark.png"
+                                            alt="Emotions to Color" loading="lazy">
+                                    </figure>
+                                </button>
+                                <div class="project-header">
+                                    <h3 class="project-title">Emotions to Color - Palette generator</h3>
+                                    <a class="project-link-btn" href="https://github.com/zabayone/EmotionsToColor" target="_blank"
+                                        rel="noopener noreferrer"><ion-icon name="link-outline"></ion-icon></a>
+                                </div>
                                 <p class="project-category">Creative Programming, Music Information Retrieval</p>
-                            </a>
+                            </div>
                         </li>
+                    
                     </ul>
+
                 </section>
             </article>
+            
+            <!-- PROJECT ARTICLE MODAL -->
+            <div class="project-modal-container" data-project-modal-container>
+                <div class="overlay" data-project-overlay></div>
+            
+                <section class="project-modal">
+                    <button class="modal-close-btn" data-project-close-btn aria-label="Close project article">
+                        <ion-icon name="close-outline"></ion-icon>
+                    </button>
+            
+                    <div class="project-modal-content" id="project-modal-content"></div>
+                </section>
+            </div>
+            
+            <!-- PROJECT TEMPLATES -->
+            <template id="project-earbuddy">
+                <div class="project-article">
+                    <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/eb_dark.png" alt="Ear Buddy cover">
+                    <span class="project-article-tag">Creative Programming</span>
+                    <h2>Ear Buddy</h2>
+                    <p>
+                        Ear Buddy is a WebApp designed for the final exam of the Advanced Coding Tools And Metodologies course. It provides a platform for ear training and vocal exercises, offering interactive feedback to help users improve their musical skills.
+                    </p>
+            
+                    <h3>Presentation</h3>
+                    <p>
+                        The idea behind the project is to transform practices often perceived as repetitive, such as pitch recognition,
+                        intonation, and active listening, into a more interactive experience. The focus is on the relationship between
+                        visual feedback, audio response, and usability.
+                    </p>
+
+                    <h3>Technologies used</h3>
+                    <ul class="project-article-list">
+                        <li>Frontend: JavaScript, HTML, CSS.</li>
+                        <li>Audio processing: Tone.JS.</li>
+                        <li>Hosting: Vercel.</li>
+                    </ul>
+
+                    <h3>What I worked on</h3>
+                    <ul class="project-article-list">
+                        <li>Design of the interface for musical exercises.</li>
+                        <li>User experience design and optimization.</li>
+                        <li>Overall graphical design.</li>
+                    </ul>
+            
+                    <h3>Find out more</h3>
+                    <p>
+                        The Github repository can be found at <a href="https://github.com/zabayone/Ear-Buddy" class="link"target="_blank" rel="noopener noreferrer">https://github.com/zabayone/Ear-Buddy</a> and includes the source code and a link to the hosted version.
+                    </p>
+                </div>
+            </template>
+            
+            <template id="project-tiles">
+                <div class="project-article">
+                    <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/tiles_dark.png" alt="T.I.L.E.S. cover">
+                    <span class="project-article-tag">Creative Programming · Digital Signal Processing</span>
+                    <h2>T.I.L.E.S.</h2>
+                    <p>
+                        T.I.L.E.S. stands for Tangible Interface for Layered Electronic Sounds. It is a project that explores the design and implementation of a physical interface for controlling electronic music layers, with a focus on the relationship between gesture, sound, and performance.
+                    </p>
+            
+                    <h3>Presentation</h3>
+                    <p>
+                        The project places the relationship between gesture, object, and sonic result at its center. The tangible interface
+                        makes the construction of electronic sounds more immediate and opens up a performative, collaborative, and
+                        intuitive approach. Moreover the synthesizer is designed to be used by all users, regardless of their technical background, as well as disabled users, with a focus on accessibility and inclusivity.
+                    </p>
+
+                    <h3>Technologies used</h3>
+                    <ul class="project-article-list">
+                        <li>Hardware: Arduino, potentiometers, custom made magnetic tiles, custom-built interface.</li>
+                        <li>Software: JUCE, SuperCollider, Processing</li>
+                    </ul>
+
+                    <h3>What I worked on</h3>
+                    <ul class="project-article-list">
+                        <li>Project design and ideation.</li>
+                        <li>Processing interface design.</li>
+                        <li>JUCE filters for the synthesis pipeline</li>
+                    </ul>
+            
+                    <h3>Find out more</h3>
+                    <p>
+                        The Github repository can be found at <a href="https://github.com/zabayone/T.I.L.E.S." class="link" target="_blank" rel="noopener noreferrer">https://github.com/zabayone/T.I.L.E.S.</a> and includes the source code for the software components, as well as documentation of the hardware design and implementation.
+                    </p>
+                </div>
+            </template>
+            
+            <template id="project-stmae">
+                <div class="project-article">
+                    <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/stmae_dark.png" alt="STMAE cover">
+                    <span class="project-article-tag">Music Information Retrieval</span>
+                    <h2>STMAE - Final project</h2>
+                    <p>
+                        This project is the final assignment for the Selected Topics in Music and Acoustic Engineering course, focused on Machine Learning and Music Information Retrieval. The project consists of a ML model to recognize and classify ambiental sounds.
+                    </p>
+            
+                    <h3>Presentation</h3>
+                    <p>
+                        The project is designed to explore the application of machine learning techniques to the field of music information retrieval, with a specific focus on the classification of environmental sounds. The goal is to develop a model capable of accurately identifying and categorizing various types of sounds, specifically related to the urban envirovement.
+                    </p>
+
+                    <h3>Technologies used</h3>
+                    <ul class="project-article-list">
+                        <li>Programming language: Python.</li>
+                        <li>Libraries: Librosa, Numpy, Scipy, Tensorflow, Keras.</li>
+                        <li>Dataset: DCASE 2013</li>
+                    </ul>
+
+                    <h3>What I worked on</h3>
+                    <ul class="project-article-list">
+                        <li>Data collection and preprocessing.</li>
+                        <li>Model design and training.</li>
+                        <li>Evaluation and analysis of results.</li>
+                    </ul>
+            
+                    <h3>Find out more</h3>
+                    <p>
+                        The Github repository can be found at <a href="https://github.com/zabayone/STMAE-final-project" class="link" target="_blank" rel="noopener noreferrer">https://github.com/zabayone/STMAE-final-project</a> and includes the source code for the software components, as well as documentation of the design and implementation.
+                    </p>
+                </div>
+            </template>
+            
+            <template id="project-roomacoustics">
+                <div class="project-article">
+                    <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/roomac_dark.png"
+                        alt="Room Acoustics cover">
+                    <span class="project-article-tag">Acoustics</span>
+                    <h2>Room Acoustics - Final Projects</h2>
+                    <p>
+                        This project is the final assignment for the Room Acoustics course, focused on the analysis and design of acoustic spaces. The project consists of a comprehensive study of the acoustic characteristics of a specific environment, with the aim of understanding how to optimize its sound quality.
+                    </p>
+            
+                    <h3>Presentation</h3>
+                    <p>
+                        The project is designed to explore the principles of room acoustics, including sound propagation, reflection, absorption, and diffusion. The project is composed of two sections. The first part is focused on the analysis of the acoustic characteristics of a specific environment using the ECHO software, while the second part is dedicated to the design of interventions to improve the acoustic quality (mainly the reverberation time) of a chosen space.
+                    </p>
+
+                    <h3>Technologies used</h3>
+                    <ul class="project-article-list">
+                        <li>Software: ECHO, REW.</li>
+                        <li>Measurement tools: Audio monitors, measurements microphone, audio interface.</li>
+                    </ul>
+
+                    <h3>What I worked on</h3>
+                    <ul class="project-article-list">
+                        <li>Analysis and measurements of the acoustic behavior of an environment.</li>
+                        <li>Interpretation of parameters such as reverberation, clarity, and intelligibility.</li>
+                        <li>Assessment of possible interventions and configurations.</li>
+                    </ul>
+            
+                    <h3>Find out more</h3>
+                    <p>
+                        The report is available as a PDF file linked in the project header. It includes detailed documentation of the measurement process, analysis of results, and proposed interventions for acoustic improvement. The report is structured to provide a clear understanding of the methodologies used and the conclusions drawn from the study.
+                    </p>
+                </div>
+            </template>
+            
+            <template id="project-electroacoustic">
+                <div class="project-article">
+                    <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/etrcomp_dark.png"
+                        alt="Electroacoustic Composition cover">
+                    <span class="project-article-tag">Sound Design</span>
+                    <h2>Electroacoustic Composition - Final Project</h2>
+                    <p>
+                        This project is dedicated to electroacoustic composition and sound design, with attention to the
+                        narrative construction of sound and the exploration of different synthesis techniques.
+                    </p>
+            
+                    <h3>Presentation</h3>
+                    <p>
+                        The project consists of a composition, the main theme of which is the exploration of the different sound synthesis technologies across the history of electronic music. The piece is structured in four sections, each focused on a specific decade and its characteristic sounds.
+                    </p>
+
+                    <h3>Technologies used</h3>
+                    <ul class="project-article-list">
+                        <li>Software: Logic Pro</li>
+                        <li>Techniques: Subtractive synthesis, Physical modeling synthesis, Additive synthesis, Mixing and Mastering</li>
+                    </ul>
+
+                    <h3>What I worked on</h3>
+                    <ul class="project-article-list">
+                        <li>Sound design and synthesis for each section of the composition.</li>
+                        <li>Arrangement and structure of the piece.</li>
+                        <li>Mixing and mastering to achieve a coherent sonic result.</li>
+                    </ul>
+            
+                    <h3>Find out more</h3>
+                    <p>
+                        The report as well as the audio files are available in a zip file linked in the project header. The report includes an analysis of the compositional process, the techniques used, and the conceptual framework behind the piece, while the audio files allow for a direct experience of the composition.
+                    </p>
+                </div>
+            </template>
+            
+            <template id="project-mpt">
+                <div class="project-article">
+                    <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/mpt_dark.png"
+                        alt="Music Production Technologies cover">
+                    <span class="project-article-tag">Sound Design</span>
+                    <h2>Music Production Technologies - Final Project</h2>
+                    <p>
+                        This project is focused on music production technologies, with an emphasis on the creative and technical aspects of producing a track. The project involves the creation of a commercial sound track, consisting of the music, sound effects and background sounds.
+                    </p>
+            
+                    <h3>Presentation</h3>
+                    <p>
+                        The aim of the project is to create a complete commercial. The commercial we chose was a San Pellegrino spot with various scenes taking place in different cities around the world. The main focus was to select the appropriate instruments and to create a coherent track featuring the typical elements of the various musical cultures represented in the commercial, while maintaining a consistent identity throughout the piece.
+                    </p>
+                    <p>
+                        Another challenge was to find realistic sound effects and background sounds to create a believable soundscape, as well as to mix and master the track to achieve a polished final result.
+                    </p>
+
+                    <h3>Technologies used</h3>
+                    <ul class="project-article-list">
+                        <li>Software: Logic Pro</li>
+                        <li>Techniques: Sound design, Sound layering, Mixing and Mastering</li>
+                    </ul>
+            
+                    <h3>What I worked on</h3>
+                    <ul class="project-article-list">
+                        <li>Selection of instruments and sound design for the track.</li>
+                        <li>Arrangement and structure of the composition.</li>
+                        <li>Mixing and mastering to achieve a commercial sound quality.</li>
+                    </ul>
+            
+                    <h3>Find out more</h3>
+                    <p>
+                        The final results is available at <a href="https://www.youtube.com/watch?v=wJQDhbMxOgw" class="link" target="_blank" rel="noopener noreferrer">https://www.youtube.com/watch?v=wJQDhbMxOgw</a>. The video includes the final composition synchronized with the commercial, allowing for an immersive experience of the sound design and production work done for the project.
+                    </p>
+                </div>
+            </template>
+            
+            <template id="project-emotions">
+                <div class="project-article">
+                    <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/etc_dark.png"
+                        alt="Emotions to Color cover">
+                    <span class="project-article-tag">Creative Programming · Music Information Retrieval</span>
+                    <h2>Emotions to Color - Palette generator</h2>
+                    <p>
+                        This project is a palette generator that translates emotional aspects of the musical experience into a synthetic visual representation. It is a work that sits at the intersection of data interpretation, creative coding, and interactive design.
+                    </p>
+            
+                    <h3>Presentation</h3>
+                    <p>
+                        The project is part of my work for my final master's thesis. The overall goal is to create a VR experience which adapts to the estimated emotional content of a piano performance. This module is designed to generate a palette of colors that can be used to create a visual environment that reflects the emotional content of the music, enhancing the immersive experience of the VR application.
+                    </p>
+                    <p>
+                        To achieve this, I designed a machine learning model to generate a color palette from a text input describing the emotional content of the music. The model is trained on two datasets of color palettes, one featuring comments and one with tags, the two are concatenated and given to the model with different weights. 
+                        The final output is interpolated with a base palette for each emotion to create a more coherent and visually appealing result.
+                    </p>
+                    <p>
+                        The model uses OkLab color space, which is designed to be perceptually uniform, meaning that the distance between colors in this space corresponds to the perceived difference between them. This allows for a more accurate representation of the emotional content in the generated palettes.
+                    </p>
+
+                    <h3>Technologies used</h3>
+                    <ul class="project-article-list">
+                        <li>Programming language: Python.</li>
+                        <li>Libraries: Pytorch, Numpy, Pandas, Colour-science</li>
+                        <li>Datasets: Publicly available datasets</li>
+                    </ul>
+
+                    <h3>What I worked on</h3>
+                    <ul class="project-article-list">
+                        <li>Data collection and preprocessing.</li>
+                        <li>Model design and training.</li>
+                        <li>Evaluation and analysis of results.</li>
+                    </ul>
+            
+                    <h3>Find out more</h3>
+                    <p>
+                        The Github repository can be found at <a href="https://github.com/zabayone/Emotions-to-Color" class="link" target="_blank" rel="noopener noreferrer">https://github.com/zabayone/Emotions-to-Color</a>. It includes the source code for the model, as well as documentation of the design and implementation process, and examples of generated palettes based on different emotional inputs.
+                    </p>
+                </div>
+            </template>
             <article class="contact " data-page="contact">
                 <header>
                     <h2 class="h2 article-title">Contact</h2>
