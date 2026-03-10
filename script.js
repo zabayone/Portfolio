@@ -89,7 +89,7 @@ for (let i = 0; i < navigationLinks.length; i++) {
 const themeToggleBtn = document.querySelector('[data-theme-toggle]');
 const themeIcon = document.querySelector('.theme-icon');
 
-// Funzione per aggiornare le immagini in base al tema
+// Update project images based on current theme
 const updateProjectImages = () => {
     const isDark = !document.body.classList.contains('light-mode');
     document.querySelectorAll('.project-img img').forEach(img => {
@@ -115,14 +115,14 @@ const updateProjectImages = () => {
     });
 };
 
-// Controlla preferenza salvata
+// Check saved theme preference
 const currentTheme = localStorage.getItem('theme');
 if (currentTheme === 'light') {
     document.body.classList.add('light-mode');
     themeIcon.name = 'sunny-outline';
 }
 
-// ← UN SOLO listener per il toggle
+// Single listener for the theme toggle
 themeToggleBtn.addEventListener('click', function () {
     document.body.classList.toggle('light-mode');
     if (document.body.classList.contains('light-mode')) {
@@ -135,7 +135,7 @@ themeToggleBtn.addEventListener('click', function () {
     updateProjectImages();
 });
 
-// Applica al caricamento
+// Apply theme on page load
 updateProjectImages();
 
 /* ===== PROJECT ARTICLES MODAL ===== */
