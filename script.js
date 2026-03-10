@@ -93,6 +93,18 @@ const themeIcon = document.querySelector('.theme-icon');
 const updateProjectImages = () => {
     const isDark = !document.body.classList.contains('light-mode');
     document.querySelectorAll('.project-img img').forEach(img => {
+        const picture = img.closest('picture');
+        if (picture) {
+            picture.querySelectorAll('source').forEach(source => {
+                if (isDark) {
+                    if (!source.srcset.includes('_dark')) {
+                        source.srcset = source.srcset.replace(/\.(webp)$/i, '_dark.$1');
+                    }
+                } else {
+                    source.srcset = source.srcset.replace(/_dark(\.webp)$/i, '$1');
+                }
+            });
+        }
         if (isDark) {
             if (!img.src.includes('_dark')) {
                 img.src = img.src.replace(/\.png$/i, '_dark.png');
