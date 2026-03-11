@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio</title>
+    <title>Nicola Nespoli | Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/Memoji.png" type="image/x-icon">
 </head>
@@ -16,7 +16,10 @@
         <aside class="sidebar " data-sidebar>
             <div class="sidebar-info">
                 <figure class="avatar-box">
-                    <img class="memoji" src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/Memoji.png" alt="avatar" width="80">
+                    <picture>
+                        <source type="image/webp" srcset="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/Memoji.webp">
+                        <img class="memoji" src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/Memoji.png" alt="avatar" width="80" height="80" decoding="async" fetchpriority="high">
+                    </picture>
                 </figure>
                 <button class="theme-toggle-btn" data-theme-toggle>
                     <ion-icon name="moon-outline" class="theme-icon"></ion-icon>
@@ -97,14 +100,17 @@
                 </header>
                 <section class="about-text">
                     <p>I'm Nicola Nespoli, an Acoustic Engineering student at Politecnico di Milano. I love exploring the intersection of sound, technology, and creativity. My interest is focused on finding innovative solutions to real-life acoustic problems, from room acoustics to audio signal processing.</p>
-                    <p>I combine technical knowledge with curiosity, always striving to improve my skills in both scientific research and practical engineering. My goal is to bring innovation in the sound industry so that people can play, listen and create music in new and better ways</p>
+                    <p>I combine technical knowledge with curiosity, always striving to improve my skills in both scientific research and practical engineering. My goal is to bring innovation in the sound industry so that people can play, listen and create music in new and better ways.</p>
                 </section>
                 <section class="service">
                     <h3 class="h3 service-title">What I'm studying & exploring</h3>
                     <ul class="service-list">
                         <li class="service-item">
                             <div class="service-icon-box">
-                            <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/Phonometer.png" alt="icon" width="40">
+                            <picture>
+                                <source type="image/webp" srcset="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/Phonometer.webp">
+                                <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/Phonometer.png" alt="icon" width="40" height="40" loading="lazy" decoding="async">
+                            </picture>
                             </div>
                             <div class="service-content-box">
                                 <h4 class="h4 service-item-title">Environmental Acoustics</h4>
@@ -113,7 +119,10 @@
                         </li>
                         <li class="service-item">
                             <div class="service-icon-box">
-                                <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/DSP.png" alt="icon" width="40">
+                                <picture>
+                                    <source type="image/webp" srcset="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/DSP.webp">
+                                    <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/DSP.png" alt="icon" width="40" height="40" loading="lazy" decoding="async">
+                                </picture>
                             </div>
                             <div class="service-content-box">
                                 <h4 class="h4 service-item-title">Digital Signal Processing</h4>
@@ -122,7 +131,10 @@
                         </li>
                         <li class="service-item">
                             <div class="service-icon-box">
-                                <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/MIR.png" alt="icon" width="40">
+                                <picture>
+                                    <source type="image/webp" srcset="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/MIR.webp">
+                                    <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/MIR.png" alt="icon" width="40" height="40" loading="lazy" decoding="async">
+                                </picture>
                             </div>
                             <div class="service-content-box">
                                 <h4 class="h4 service-item-title">Music Information Retrieval</h4>
@@ -131,7 +143,10 @@
                         </li>
                         <li class="service-item">
                             <div class="service-icon-box">
-                                <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/Creative-Programming.png" alt="icon" width="40">
+                                <picture>
+                                    <source type="image/webp" srcset="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/Creative-Programming.webp">
+                                    <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/Creative-Programming.png" alt="icon" width="40" height="40" loading="lazy" decoding="async">
+                                </picture>
                             </div>
                             <div class="service-content-box">
                                 <h4 class="h4 service-item-title">Creative Audio Programming</h4>
@@ -160,7 +175,7 @@
                         <li class="timeline-item">
                             <h4 class="h4 timeline-item-title">Politecnico di Milano</h4>
                             <span>2021 - 2024</span>
-                            <p class="timeline-text">BSc in Automation and Control Engineering. Courses in mathematics, physics, control theory, industrial Engineering.</p>
+                            <p class="timeline-text">BSc in Automation and Control Engineering. Courses in mathematics, physics, control theory, Industrial Engineering.</p>
                         </li>
                         <li class="timeline-item">
                             <h4 class="h4 timeline-item-title">Liceo Scientifico</h4>
@@ -178,7 +193,7 @@
                         <li class="timeline-item">
                             <h4 class="h4 timeline-item-title">Sound Engineer</h4>
                             <span>2024</span>
-                            <p class="timeline-text"> Recording, Mixing and Mastering a suite of liturgical chants for Edizioni Paoline</p>
+                            <p class="timeline-text">Recording, mixing and mastering a suite of liturgical chants for Edizioni Paoline</p>
                         </li>
                         <li class="timeline-item">
                             <h4 class="h4 timeline-item-title">Music Producer</h4>
@@ -196,7 +211,7 @@
                     <li class="skills-item">Environmental Acoustics</li>
                     <li class="skills-item">Digital Signal Processing</li>
                     <li class="skills-item">Music Production</li>
-                    <li class="skills-item">Programming: <span class="subskills">Python: Librosa, Numpy, Scipy, Tensorflow, Keras. Matlab, C++ (Juce), Supercollider.</span></li>
+                    <li class="skills-item">Programming: <span class="subskills">Python: Librosa, Numpy, Scipy, TensorFlow, Keras. Matlab, C++ (JUCE), Supercollider.</span></li>
                 </ul>
                 </section>
 
@@ -248,8 +263,11 @@
                                 <button class="project-image-btn" data-open-project="earbuddy" type="button">
                                     <figure class="project-img">
                                         <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
-                                        <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/eb_dark.png" alt="Ear Buddy"
-                                            loading="lazy">
+                                        <picture>
+                                            <source type="image/webp" srcset="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/eb_dark.webp">
+                                            <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/eb_dark.png" alt="Ear Buddy"
+                                                loading="lazy" decoding="async" width="600" height="335">
+                                        </picture>
                                     </figure>
                                 </button>
                                 <div class="project-header">
@@ -266,8 +284,11 @@
                                 <button class="project-image-btn" data-open-project="tiles" type="button">
                                     <figure class="project-img">
                                         <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
-                                        <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/tiles_dark.png"
-                                            alt="T.I.L.E.S." loading="lazy">
+                                        <picture>
+                                            <source type="image/webp" srcset="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/tiles_dark.webp">
+                                            <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/tiles_dark.png"
+                                                alt="T.I.L.E.S." loading="lazy" decoding="async" width="600" height="335">
+                                        </picture>
                                     </figure>
                                 </button>
                                 <div class="project-header">
@@ -285,8 +306,11 @@
                                 <button class="project-image-btn" data-open-project="stmae" type="button">
                                     <figure class="project-img">
                                         <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
-                                        <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/stmae_dark.png" alt="STMAE"
-                                            loading="lazy">
+                                        <picture>
+                                            <source type="image/webp" srcset="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/stmae_dark.webp">
+                                            <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/stmae_dark.png" alt="STMAE"
+                                                loading="lazy" decoding="async" width="600" height="335">
+                                        </picture>
                                     </figure>
                                 </button>
                                 <div class="project-header">
@@ -303,12 +327,15 @@
                                 <button class="project-image-btn" data-open-project="roomacoustics" type="button">
                                     <figure class="project-img">
                                         <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
-                                        <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/roomac_dark.png"
-                                            alt="Room Acoustics" loading="lazy">
+                                        <picture>
+                                            <source type="image/webp" srcset="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/roomac_dark.webp">
+                                            <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/roomac_dark.png"
+                                                alt="Room Acoustics" loading="lazy" decoding="async" width="600" height="335">
+                                        </picture>
                                     </figure>
                                 </button>
                                 <div class="project-header">
-                                    <h3 class="project-title">Room Acoustics - Final Projects</h3>
+                                    <h3 class="project-title">Room Acoustics - Final Project</h3>
                                     <a class="project-link-btn"
                                         href="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/RoomAcoustics.pdf"
                                         target="_blank" rel="noopener noreferrer"><ion-icon name="link-outline"></ion-icon></a>
@@ -322,8 +349,11 @@
                                 <button class="project-image-btn" data-open-project="electroacoustic" type="button">
                                     <figure class="project-img">
                                         <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
-                                        <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/etrcomp_dark.png"
-                                            alt="Electroacoustic Composition" loading="lazy">
+                                        <picture>
+                                            <source type="image/webp" srcset="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/etrcomp_dark.webp">
+                                            <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/etrcomp_dark.png"
+                                                alt="Electroacoustic Composition" loading="lazy" decoding="async" width="600" height="335">
+                                        </picture>
                                     </figure>
                                 </button>
                                 <div class="project-header">
@@ -341,8 +371,11 @@
                                 <button class="project-image-btn" data-open-project="mpt" type="button">
                                     <figure class="project-img">
                                         <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
-                                        <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/mpt_dark.png"
-                                            alt="Music Production Technologies" loading="lazy">
+                                        <picture>
+                                            <source type="image/webp" srcset="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/mpt_dark.webp">
+                                            <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/mpt_dark.png"
+                                                alt="Music Production Technologies" loading="lazy" decoding="async" width="600" height="335">
+                                        </picture>
                                     </figure>
                                 </button>
                                 <div class="project-header">
@@ -359,8 +392,11 @@
                                 <button class="project-image-btn" data-open-project="emotions" type="button">
                                     <figure class="project-img">
                                         <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
-                                        <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/etc_dark.png"
-                                            alt="Emotions to Color" loading="lazy">
+                                        <picture>
+                                            <source type="image/webp" srcset="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/etc_dark.webp">
+                                            <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/etc_dark.png"
+                                                alt="Emotions to Color" loading="lazy" decoding="async" width="600" height="335">
+                                        </picture>
                                     </figure>
                                 </button>
                                 <div class="project-header">
@@ -393,11 +429,14 @@
             <!-- PROJECT TEMPLATES -->
             <template id="project-earbuddy">
                 <div class="project-article">
-                    <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/eb_dark.png" alt="Ear Buddy cover">
+                    <picture>
+                        <source type="image/webp" srcset="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/eb_dark.webp">
+                        <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/eb_dark.png" alt="Ear Buddy cover" decoding="async">
+                    </picture>
                     <span class="project-article-tag">Creative Programming</span>
                     <h2>Ear Buddy</h2>
                     <p>
-                        Ear Buddy is a WebApp designed for the final exam of the Advanced Coding Tools And Metodologies course. It provides a platform for ear training and vocal exercises, offering interactive feedback to help users improve their musical skills.
+                        Ear Buddy is a WebApp designed for the final exam of the Advanced Coding Tools and Methodologies course. It provides a platform for ear training and vocal exercises, offering interactive feedback to help users improve their musical skills.
                     </p>
             
                     <h3>Presentation</h3>
@@ -423,14 +462,17 @@
             
                     <h3>Find out more</h3>
                     <p>
-                        The Github repository can be found at <a href="https://github.com/zabayone/Ear-Buddy" class="link"target="_blank" rel="noopener noreferrer">https://github.com/zabayone/Ear-Buddy</a> and includes the source code and a link to the hosted version.
+                        The Github repository can be found at <a href="https://github.com/zabayone/Actam_Project" class="link" target="_blank" rel="noopener noreferrer">https://github.com/zabayone/Actam_Project</a> and includes the source code and a link to the hosted version.
                     </p>
                 </div>
             </template>
             
             <template id="project-tiles">
                 <div class="project-article">
-                    <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/tiles_dark.png" alt="T.I.L.E.S. cover">
+                    <picture>
+                        <source type="image/webp" srcset="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/tiles_dark.webp">
+                        <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/tiles_dark.png" alt="T.I.L.E.S. cover" decoding="async">
+                    </picture>
                     <span class="project-article-tag">Creative Programming</span>
                     <span class="project-article-tag">Digital Signal Processing</span>
                     <h2>T.I.L.E.S.</h2>
@@ -442,7 +484,7 @@
                     <p>
                         The project places the relationship between gesture, object, and sonic result at its center. The tangible interface
                         makes the construction of electronic sounds more immediate and opens up a performative, collaborative, and
-                        intuitive approach. Moreover the synthesizer is designed to be used by all users, regardless of their technical background, as well as disabled users, with a focus on accessibility and inclusivity.
+                        intuitive approach. Moreover, the synthesizer is designed to be used by all users, regardless of their technical background, as well as disabled users, with a focus on accessibility and inclusivity.
                     </p>
 
                     <h3>Technologies used</h3>
@@ -460,29 +502,32 @@
             
                     <h3>Find out more</h3>
                     <p>
-                        The Github repository can be found at <a href="https://github.com/zabayone/T.I.L.E.S." class="link" target="_blank" rel="noopener noreferrer">https://github.com/zabayone/T.I.L.E.S.</a> and includes the source code for the software components, as well as documentation of the hardware design and implementation.
+                        The Github repository can be found at <a href="https://github.com/zabayone/international-love" class="link" target="_blank" rel="noopener noreferrer">https://github.com/zabayone/international-love</a> and includes the source code for the software components, as well as documentation of the hardware design and implementation.
                     </p>
                 </div>
             </template>
             
             <template id="project-stmae">
                 <div class="project-article">
-                    <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/stmae_dark.png" alt="STMAE cover">
+                    <picture>
+                        <source type="image/webp" srcset="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/stmae_dark.webp">
+                        <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/stmae_dark.png" alt="STMAE cover" decoding="async">
+                    </picture>
                     <span class="project-article-tag">Music Information Retrieval</span>
                     <h2>STMAE - Final project</h2>
                     <p>
-                        This project is the final assignment for the Selected Topics in Music and Acoustic Engineering course, focused on Machine Learning and Music Information Retrieval. The project consists of a ML model to recognize and classify ambiental sounds.
+                        This project is the final assignment for the Selected Topics in Music and Acoustic Engineering course, focused on Machine Learning and Music Information Retrieval. The project consists of a ML model to recognize and classify ambient sounds.
                     </p>
             
                     <h3>Presentation</h3>
                     <p>
-                        The project is designed to explore the application of machine learning techniques to the field of music information retrieval, with a specific focus on the classification of environmental sounds. The goal is to develop a model capable of accurately identifying and categorizing various types of sounds, specifically related to the urban envirovement.
+                        The project is designed to explore the application of machine learning techniques to the field of music information retrieval, with a specific focus on the classification of environmental sounds. The goal is to develop a model capable of accurately identifying and categorizing various types of sounds, specifically related to the urban environment.
                     </p>
 
                     <h3>Technologies used</h3>
                     <ul class="project-article-list">
                         <li>Programming language: Python.</li>
-                        <li>Libraries: Librosa, Numpy, Scipy, Tensorflow, Keras.</li>
+                        <li>Libraries: Librosa, Numpy, Scipy, TensorFlow, Keras.</li>
                         <li>Dataset: DCASE 2013</li>
                     </ul>
 
@@ -502,10 +547,13 @@
             
             <template id="project-roomacoustics">
                 <div class="project-article">
-                    <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/roomac_dark.png"
-                        alt="Room Acoustics cover">
+                    <picture>
+                        <source type="image/webp" srcset="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/roomac_dark.webp">
+                        <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/roomac_dark.png"
+                            alt="Room Acoustics cover" decoding="async">
+                    </picture>
                     <span class="project-article-tag">Acoustics</span>
-                    <h2>Room Acoustics - Final Projects</h2>
+                    <h2>Room Acoustics - Final Project</h2>
                     <p>
                         This project is the final assignment for the Room Acoustics course, focused on the analysis and design of acoustic spaces. The project consists of a comprehensive study of the acoustic characteristics of a specific environment, with the aim of understanding how to optimize its sound quality.
                     </p>
@@ -537,8 +585,11 @@
             
             <template id="project-electroacoustic">
                 <div class="project-article">
-                    <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/etrcomp_dark.png"
-                        alt="Electroacoustic Composition cover">
+                    <picture>
+                        <source type="image/webp" srcset="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/etrcomp_dark.webp">
+                        <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/etrcomp_dark.png"
+                            alt="Electroacoustic Composition cover" decoding="async">
+                    </picture>
                     <span class="project-article-tag">Sound Design</span>
                     <h2>Electroacoustic Composition - Final Project</h2>
                     <p>
@@ -573,8 +624,11 @@
             
             <template id="project-mpt">
                 <div class="project-article">
-                    <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/mpt_dark.png"
-                        alt="Music Production Technologies cover">
+                    <picture>
+                        <source type="image/webp" srcset="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/mpt_dark.webp">
+                        <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/mpt_dark.png"
+                            alt="Music Production Technologies cover" decoding="async">
+                    </picture>
                     <span class="project-article-tag">Sound Design</span>
                     <h2>Music Production Technologies - Final Project</h2>
                     <p>
@@ -604,15 +658,18 @@
             
                     <h3>Find out more</h3>
                     <p>
-                        The final results is available at <a href="https://www.youtube.com/watch?v=wJQDhbMxOgw" class="link" target="_blank" rel="noopener noreferrer">https://www.youtube.com/watch?v=wJQDhbMxOgw</a>. The video includes the final composition synchronized with the commercial, allowing for an immersive experience of the sound design and production work done for the project.
+                        The final result is available at <a href="https://www.youtube.com/watch?v=wJQDhbMxOgw" class="link" target="_blank" rel="noopener noreferrer">https://www.youtube.com/watch?v=wJQDhbMxOgw</a>. The video includes the final composition synchronized with the commercial, allowing for an immersive experience of the sound design and production work done for the project.
                     </p>
                 </div>
             </template>
             
             <template id="project-emotions">
                 <div class="project-article">
-                    <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/etc_dark.png"
-                        alt="Emotions to Color cover">
+                    <picture>
+                        <source type="image/webp" srcset="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/etc_dark.webp">
+                        <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/etc_dark.png"
+                            alt="Emotions to Color cover" decoding="async">
+                    </picture>
                     <span class="project-article-tag">Creative Programming</span>
                     <span class="project-article-tag">Music Information Retrieval</span>
                     <h2>Emotions to Color - Palette generator</h2>
