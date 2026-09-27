@@ -93,6 +93,10 @@ const themeIcon = document.querySelector('.theme-icon');
 const updateProjectImages = () => {
     const isDark = !document.body.classList.contains('light-mode');
     document.querySelectorAll('.project-img img').forEach(img => {
+        if (img.dataset.themeDark && img.dataset.themeLight) {
+            img.src = isDark ? img.dataset.themeDark : img.dataset.themeLight;
+            return;
+        }
         const picture = img.closest('picture');
         if (picture) {
             picture.querySelectorAll('source').forEach(source => {

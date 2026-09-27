@@ -170,7 +170,7 @@
                         <li class="timeline-item">
                             <h4 class="h4 timeline-item-title">Politecnico di Milano</h4>
                             <span>2024 - Present</span>
-                            <p class="timeline-text">MSc in Acoustic Engineering. Courses in sound physics, electroacoustics, digital signal processing, creative programming, AI applications for music.</p>
+                            <p class="timeline-text">MSc in Music and Acoustic Engineering, Acoustics track. Ongoing thesis: ObjSplat, a memory-aware pipeline for reconstructing 3D scenes from a single panorama using 3D Gaussian Splatting.</p>
                         </li>
                         <li class="timeline-item">
                             <h4 class="h4 timeline-item-title">Politecnico di Milano</h4>
@@ -190,6 +190,11 @@
                         <h3 class="h3">Experience</h3>
                     </div>
                     <ol class="timeline-list">
+                        <li class="timeline-item">
+                            <h4 class="h4 timeline-item-title">Sound Design Intern · The LEGO Group</h4>
+                            <span>2026 · Denmark</span>
+                            <p class="timeline-text">Developing real-time audio solutions for interactive products at the intersection of sound design and audio DSP. Collaborating with designers and engineers from early concepts through functional prototypes.</p>
+                        </li>
                         <li class="timeline-item">
                             <h4 class="h4 timeline-item-title">Sound Engineer</h4>
                             <span>2024</span>
@@ -258,6 +263,22 @@
             
                     <ul class="project-list">
                     
+                        <li class="project-item active" data-filter-item data-category="Creative Programming, Music Information Retrieval">
+                            <div class="project-card">
+                                <button class="project-image-btn" data-open-project="objsplat" type="button">
+                                    <figure class="project-img">
+                                        <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                                        <img src="Media/ObjSplat-dark.jpg" data-theme-dark="Media/ObjSplat-dark.jpg" data-theme-light="Media/ObjSplat-light.jpg" alt="ObjSplat single-panorama 3D Gaussian Splatting pipeline" loading="lazy" decoding="async" width="1376" height="768">
+                                    </figure>
+                                </button>
+                                <div class="project-header">
+                                    <h3 class="project-title">ObjSplat - Single-panorama 3D reconstruction</h3>
+                                    <a class="project-link-btn" href="https://github.com/zabayone/Tesi_Nicola_Nespoli" target="_blank" rel="noopener noreferrer" aria-label="Thesis repository"><ion-icon name="logo-github"></ion-icon></a>
+                                </div>
+                                <p class="project-category">Thesis · 3D Gaussian Splatting</p>
+                            </div>
+                        </li>
+
                         <li class="project-item active" data-filter-item data-category="Creative Programming">
                             <div class="project-card">
                                 <button class="project-image-btn" data-open-project="earbuddy" type="button">
@@ -427,6 +448,27 @@
             </div>
             
             <!-- PROJECT TEMPLATES -->
+            <template id="project-objsplat">
+                <div class="project-article">
+                    <img src="Media/ObjSplat-dark.jpg" alt="ObjSplat single-panorama 3D Gaussian Splatting pipeline" decoding="async" width="1376" height="768">
+                    <span class="project-article-tag">Master's Thesis · 2025-2026</span>
+                    <span class="project-article-tag">3D Gaussian Splatting</span>
+                    <h2>ObjSplat: Efficient 3D Reconstruction from a Single Panorama</h2>
+                    <p>ObjSplat is my ongoing MSc thesis: a pipeline for reconstructing and rendering a 3D environment from one equirectangular panorama while reducing peak training memory.</p>
+                    <h3>Approach</h3>
+                    <p>The pipeline estimates panoramic depth, generates perspective training views, and uses semantic masks to split a scene into object, background, residual, and sky components. These components are trained independently and merged into an explicit 3D Gaussian Splatting scene.</p>
+                    <p>The implementation targets Apple Silicon and uses the MLX-based Splat-Apple backend. The evaluation compares layered and monolithic training across reconstruction fidelity, training time, peak memory, scene size, and rendering performance. Results are still under development.</p>
+                    <h3>Technologies and methods</h3>
+                    <ul class="project-article-list">
+                        <li>3D Gaussian Splatting and novel-view synthesis</li>
+                        <li>Panoramic depth estimation and perspective reprojection</li>
+                        <li>GroundingDINO and SAM 2 for semantic scene decomposition</li>
+                        <li>Apple Silicon, MLX, and Splat-Apple</li>
+                    </ul>
+                    <p>The thesis draft describes the method and planned experimental protocol; quantitative results are not yet available.</p>
+                </div>
+            </template>
+
             <template id="project-earbuddy">
                 <div class="project-article">
                     <picture>
@@ -679,7 +721,7 @@
             
                     <h3>Presentation</h3>
                     <p>
-                        The project is part of my work for my final master's thesis. The overall goal is to create a VR experience which adapts to the estimated emotional content of a piano performance. This module is designed to generate a palette of colors that can be used to create a visual environment that reflects the emotional content of the music, enhancing the immersive experience of the VR application.
+                        This is an independent creative programming and music information retrieval project. It explores how a short emotional description can be translated into a color palette; it is separate from my current master's thesis, ObjSplat.
                     </p>
                     <p>
                         To achieve this, I designed a machine learning model to generate a color palette from a text input describing the emotional content of the music. The model is trained on two datasets of color palettes, one featuring comments and one with tags, the two are concatenated and given to the model with different weights. 
