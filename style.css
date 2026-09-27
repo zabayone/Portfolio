@@ -1929,7 +1929,7 @@ textarea.form-input {
     .sidebar {
         position: sticky;
         top: 60px;
-        max-height: 750px;
+        max-height: 780px;
         height: 100%;
         margin-bottom: 0;
         padding-top: 60px;
