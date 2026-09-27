@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nicola Nespoli | Portfolio</title>
+    <title>Nicola Nespoli — Acoustic Engineer &amp; Creative Technologist</title>
+    <meta name="description" content="Nicola Nespoli works across acoustic engineering, interactive audio, digital signal processing and creative technology. Explore selected projects and experience.">
+    <meta name="theme-color" content="#101b21">
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/Memoji.png" type="image/x-icon">
+    <link rel="icon" href="Media/Memoji.png" type="image/png">
 </head>
 <body>
     <div class="bg-blob bg-blob--1" aria-hidden="true"></div>
@@ -17,23 +19,23 @@
             <div class="sidebar-info">
                 <figure class="avatar-box">
                     <picture>
-                        <source type="image/webp" srcset="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/Memoji.webp">
-                        <img class="memoji" src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/Memoji.png" alt="avatar" width="80" height="80" decoding="async" fetchpriority="high">
+                        <source type="image/webp" srcset="Media/Memoji.webp">
+                        <img class="memoji" src="Media/Memoji.png" alt="Illustrated portrait of Nicola Nespoli" width="80" height="80" decoding="async" fetchpriority="high">
                     </picture>
                 </figure>
-                <button class="theme-toggle-btn" data-theme-toggle>
+                <button class="theme-toggle-btn" data-theme-toggle type="button" aria-label="Switch to light theme" title="Change theme">
                     <ion-icon name="moon-outline" class="theme-icon"></ion-icon>
                 </button>   
                 <div class="info-content">
                     <h1 class="name" title="Nicola Nespoli">Nicola Nespoli</h1>
-                    <p class="title">Acoustic Engineering Student</p>
+                    <p class="title">Acoustic engineer · Sound designer</p>
                 </div>
-                <button class="info-more-btn" data-sidebar-btn>
+                <button class="info-more-btn" data-sidebar-btn type="button" aria-expanded="false" aria-controls="sidebar-details">
                     <span>Show Contacts</span>
                     <ion-icon name="chevron-down"></ion-icon>
                 </button>
             </div>
-            <div class="sidebar-info-more">
+            <div class="sidebar-info-more" id="sidebar-details">
                 <div class="separator"></div>
                 <ul class="contacts-list">
                     <li class="contact-item">
@@ -47,38 +49,38 @@
                         <div class="icon-box"><ion-icon name="phone-portrait-outline"></ion-icon></div>
                         <div class="contact-info">
                             <p class="contact-title">Phone</p>
-                            <a href="tel:(+39) 347 186 6943" class="contact-link">(+39) 347 186 6943</a>
+                            <a href="tel:+393471866943" class="contact-link">(+39) 347 186 6943</a>
                         </div>
                     </li>
                     <li class="contact-item">
                         <div class="icon-box"><ion-icon name="calendar-outline"></ion-icon></div>
                         <div class="contact-info">
-                            <p class="contact-title">Birthday</p>
-                            <time datetime="2002-11-21">November 21, 2002</time>
+                            <p class="contact-title">Focus</p>
+                            <span>Sound &amp; technology</span>
                         </div>
                     </li>
                     <li class="contact-item">
                         <div class="icon-box"><ion-icon name="location-outline"></ion-icon></div>
                         <div class="contact-info">
                             <p class="contact-title">Location</p>
-                            <address>Lodi, Lombardia, Italy</address>
+                            <address>Italy / Denmark</address>
                         </div>
                     </li>
                 </ul>
                 <div class="separator"></div>
                 <ul class="social-list">
                     <li class="social-item">
-                        <a href="https://www.linkedin.com/in/nicola-nespoli-1ba6a7151" class="social-link" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.linkedin.com/in/nicola-nespoli-1ba6a7151" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Nicola on LinkedIn">
                             <ion-icon name="logo-linkedin"></ion-icon>
                         </a>
                     </li>
                     <li class="social-item">
-                        <a href="https://www.instagram.com/nicola_nespoli" class="social-link" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.instagram.com/nicola_nespoli" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Nicola on Instagram">
                             <ion-icon name="logo-instagram"></ion-icon>
                         </a>
                     </li>
                     <li class="social-item">
-                        <a href="https://github.com/zabayone" class="social-link" target="_blank" rel="noopener noreferrer">
+                        <a href="https://github.com/zabayone" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Nicola on GitHub">
                             <ion-icon name="logo-github"></ion-icon>
                         </a>
                     </li>
@@ -86,30 +88,35 @@
             </div>
         </aside>
         <div class="main-content">
-            <nav class="navbar">
+            <nav class="navbar" aria-label="Main navigation">
                 <ul class="navbar-list">
-                    <li class="navbar-item"><button class="navbar-link active" data-nav-link>About</button></li>
-                    <li class="navbar-item"><button class="navbar-link" data-nav-link>Resume</button></li>
-                    <li class="navbar-item"><button class="navbar-link" data-nav-link>Portfolio</button></li>
-                    <li class="navbar-item"><button class="navbar-link" data-nav-link>Contact</button></li>
+                    <li class="navbar-item"><button class="navbar-link active" data-nav-link type="button" aria-current="page">About</button></li>
+                    <li class="navbar-item"><button class="navbar-link" data-nav-link type="button">Resume</button></li>
+                    <li class="navbar-item"><button class="navbar-link" data-nav-link type="button">Projects</button></li>
+                    <li class="navbar-item"><button class="navbar-link" data-nav-link type="button">Contact</button></li>
                 </ul>
             </nav>
             <article class="about active" data-page="about">
                 <header>
-                    <h2 class="h2 article-title">About me</h2>
+                    <p class="eyebrow">Sound × technology × experience</p>
+                    <h2 class="h2 article-title">Making sound tangible.</h2>
                 </header>
                 <section class="about-text">
-                    <p>I'm Nicola Nespoli, an Acoustic Engineering student at Politecnico di Milano. I love exploring the intersection of sound, technology, and creativity. My interest is focused on finding innovative solutions to real-life acoustic problems, from room acoustics to audio signal processing.</p>
-                    <p>I combine technical knowledge with curiosity, always striving to improve my skills in both scientific research and practical engineering. My goal is to bring innovation in the sound industry so that people can play, listen and create music in new and better ways.</p>
+                    <p class="lead">I’m Nicola Nespoli, a Music and Acoustic Engineering MSc student at Politecnico di Milano and a sound design intern at The LEGO Group.</p>
+                    <p>I build experiences where acoustics, audio software and creative thinking meet. My work spans interactive sound prototypes, signal processing, music analysis and spatial research.</p>
                 </section>
+                <div class="hero-actions">
+                    <button class="primary-action" type="button" data-go-to="portfolio">Explore projects <span aria-hidden="true">↗</span></button>
+                    <a class="secondary-action" href="mailto:nespolinicola5@gmail.com">Get in touch <span aria-hidden="true">→</span></a>
+                </div>
                 <section class="service">
-                    <h3 class="h3 service-title">What I'm studying & exploring</h3>
+                    <h3 class="h3 service-title">What I work on</h3>
                     <ul class="service-list">
                         <li class="service-item">
                             <div class="service-icon-box">
                             <picture>
-                                <source type="image/webp" srcset="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/Phonometer.webp">
-                                <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/Phonometer.png" alt="icon" width="40" height="40" loading="lazy" decoding="async">
+                                <source type="image/webp" srcset="Media/Phonometer.webp">
+                                <img src="Media/Phonometer.png" alt="icon" width="40" height="40" loading="lazy" decoding="async">
                             </picture>
                             </div>
                             <div class="service-content-box">
@@ -120,8 +127,8 @@
                         <li class="service-item">
                             <div class="service-icon-box">
                                 <picture>
-                                    <source type="image/webp" srcset="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/DSP.webp">
-                                    <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/DSP.png" alt="icon" width="40" height="40" loading="lazy" decoding="async">
+                                    <source type="image/webp" srcset="Media/DSP.webp">
+                                    <img src="Media/DSP.png" alt="icon" width="40" height="40" loading="lazy" decoding="async">
                                 </picture>
                             </div>
                             <div class="service-content-box">
@@ -132,8 +139,8 @@
                         <li class="service-item">
                             <div class="service-icon-box">
                                 <picture>
-                                    <source type="image/webp" srcset="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/MIR.webp">
-                                    <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/MIR.png" alt="icon" width="40" height="40" loading="lazy" decoding="async">
+                                    <source type="image/webp" srcset="Media/MIR.webp">
+                                    <img src="Media/MIR.png" alt="icon" width="40" height="40" loading="lazy" decoding="async">
                                 </picture>
                             </div>
                             <div class="service-content-box">
@@ -144,8 +151,8 @@
                         <li class="service-item">
                             <div class="service-icon-box">
                                 <picture>
-                                    <source type="image/webp" srcset="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/Creative-Programming.webp">
-                                    <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/Creative-Programming.png" alt="icon" width="40" height="40" loading="lazy" decoding="async">
+                                    <source type="image/webp" srcset="Media/Creative-Programming.webp">
+                                    <img src="Media/Creative-Programming.png" alt="icon" width="40" height="40" loading="lazy" decoding="async">
                                 </picture>
                             </div>
                             <div class="service-content-box">
@@ -229,13 +236,15 @@
             <article class="portfolio" data-page="portfolio">
             
                 <header>
-                    <h2 class="h2 article-title">Portfolio</h2>
+                    <h2 class="h2 article-title">Selected projects</h2>
                 </header>
+                <p class="section-intro">A selection of research, audio tools and sound work. Open a card to see the process and technologies behind it.</p>
             
                 <section class="projects">
             
                     <ul class="filter-list">
                         <li class="filter-item"><button class="active" data-filter-btn>All</button></li>
+                        <li class="filter-item"><button data-filter-btn>3D Reconstruction</button></li>
                         <li class="filter-item"><button data-filter-btn>Creative Programming</button></li>
                         <li class="filter-item"><button data-filter-btn>Digital Signal Processing</button></li>
                         <li class="filter-item"><button data-filter-btn>Music Information Retrieval</button></li>
@@ -244,15 +253,16 @@
                     </ul>
             
                     <div class="filter-select-box">
-                        <button class="filter-select" data-select>
-                            <div class="select-value" data-select-value>Select category</div>
+                        <button class="filter-select" data-select type="button" aria-expanded="false" aria-controls="project-filter-options">
+                            <div class="select-value" data-select-value>All</div>
                             <div class="select-icon">
                                 <ion-icon name="chevron-down"></ion-icon>
                             </div>
                         </button>
             
-                        <ul class="select-list">
+                        <ul class="select-list" id="project-filter-options">
                             <li class="select-item"><button data-select-item>All</button></li>
+                            <li class="select-item"><button data-select-item>3D Reconstruction</button></li>
                             <li class="select-item"><button data-select-item>Creative Programming</button></li>
                             <li class="select-item"><button data-select-item>Digital Signal Processing</button></li>
                             <li class="select-item"><button data-select-item>Music Information Retrieval</button></li>
@@ -263,169 +273,177 @@
             
                     <ul class="project-list">
                     
-                        <li class="project-item active" data-filter-item data-category="Creative Programming, Music Information Retrieval">
+                        <li class="project-item active" data-filter-item data-category="3D Reconstruction">
                             <div class="project-card">
-                                <button class="project-image-btn" data-open-project="objsplat" type="button">
+                                <button class="project-image-btn" data-open-project="objsplat" type="button" aria-label="Read about ObjSplat">
                                     <figure class="project-img">
                                         <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
                                         <img src="Media/ObjSplat-dark.jpg" data-theme-dark="Media/ObjSplat-dark.jpg" data-theme-light="Media/ObjSplat-light.jpg" alt="ObjSplat single-panorama 3D Gaussian Splatting pipeline" loading="lazy" decoding="async" width="1376" height="768">
                                     </figure>
                                 </button>
                                 <div class="project-header">
-                                    <h3 class="project-title">ObjSplat - Single-panorama 3D reconstruction</h3>
+                                    <h3 class="project-title">ObjSplat</h3>
                                     <a class="project-link-btn" href="https://github.com/zabayone/Tesi_Nicola_Nespoli" target="_blank" rel="noopener noreferrer" aria-label="Thesis repository"><ion-icon name="logo-github"></ion-icon></a>
                                 </div>
-                                <p class="project-category">Thesis · 3D Gaussian Splatting</p>
+                                <p class="project-category">MSc thesis · 3D reconstruction</p>
+                                <p class="project-summary">Reconstructing explorable 3D scenes from a single panorama with a memory-aware Gaussian Splatting pipeline.</p>
                             </div>
                         </li>
 
                         <li class="project-item active" data-filter-item data-category="Creative Programming">
                             <div class="project-card">
-                                <button class="project-image-btn" data-open-project="earbuddy" type="button">
+                                <button class="project-image-btn" data-open-project="earbuddy" type="button" aria-label="Read about Ear Buddy">
                                     <figure class="project-img">
                                         <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
                                         <picture>
-                                            <source type="image/webp" srcset="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/eb_dark.webp">
-                                            <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/eb_dark.png" alt="Ear Buddy"
+                                            <source type="image/webp" srcset="Media/eb_dark.webp">
+                                            <img src="Media/eb_dark.png" alt="Ear Buddy"
                                                 loading="lazy" decoding="async" width="600" height="335">
                                         </picture>
                                     </figure>
                                 </button>
                                 <div class="project-header">
-                                    <h3 class="project-title">Ear Buddy - Ear and vocal training website</h3>
-                                    <a class="project-link-btn" href="https://github.com/zabayone/Actam_Project" target="_blank"
+                                    <h3 class="project-title">Ear Buddy</h3>
+                                    <a class="project-link-btn" href="https://github.com/zabayone/Actam_Project" aria-label="View Ear Buddy source code" target="_blank"
                                         rel="noopener noreferrer"><ion-icon name="link-outline"></ion-icon></a>
                                 </div>
                                 <p class="project-category">Creative Programming</p>
+                                <p class="project-summary">An interactive web experience for ear and vocal training.</p>
                             </div>
                         </li>
                     
                         <li class="project-item active" data-filter-item data-category="Creative Programming,Digital Signal Processing">
                             <div class="project-card">
-                                <button class="project-image-btn" data-open-project="tiles" type="button">
+                                <button class="project-image-btn" data-open-project="tiles" type="button" aria-label="Read about T.I.L.E.S.">
                                     <figure class="project-img">
                                         <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
                                         <picture>
-                                            <source type="image/webp" srcset="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/tiles_dark.webp">
-                                            <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/tiles_dark.png"
+                                            <source type="image/webp" srcset="Media/tiles_dark.webp">
+                                            <img src="Media/tiles_dark.png"
                                                 alt="T.I.L.E.S." loading="lazy" decoding="async" width="600" height="335">
                                         </picture>
                                     </figure>
                                 </button>
                                 <div class="project-header">
-                                    <h3 class="project-title">T.I.L.E.S. - Tangible Interface for Layered Electronic Sounds</h3>
-                                    <a class="project-link-btn" href="https://github.com/zabayone/International-Love" target="_blank"
+                                    <h3 class="project-title">T.I.L.E.S.</h3>
+                                    <a class="project-link-btn" href="https://github.com/zabayone/International-Love" aria-label="View T.I.L.E.S. source code" target="_blank"
                                         rel="noopener noreferrer"><ion-icon name="link-outline"></ion-icon></a>
                                 </div>
                                 <p class="project-category">Creative Programming</p>
                                 <p class="project-category">Digital Signal Processing</p>
+                                <p class="project-summary">A tangible interface for building layered electronic sounds.</p>
                             </div>
                         </li>
                     
                         <li class="project-item active" data-filter-item data-category="Music Information Retrieval">
                             <div class="project-card">
-                                <button class="project-image-btn" data-open-project="stmae" type="button">
+                                <button class="project-image-btn" data-open-project="stmae" type="button" aria-label="Read about STMAE">
                                     <figure class="project-img">
                                         <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
                                         <picture>
-                                            <source type="image/webp" srcset="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/stmae_dark.webp">
-                                            <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/stmae_dark.png" alt="STMAE"
+                                            <source type="image/webp" srcset="Media/stmae_dark.webp">
+                                            <img src="Media/stmae_dark.png" alt="STMAE"
                                                 loading="lazy" decoding="async" width="600" height="335">
                                         </picture>
                                     </figure>
                                 </button>
                                 <div class="project-header">
-                                    <h3 class="project-title">STMAE - Final project</h3>
-                                    <a class="project-link-btn" href="https://github.com/zabayone/STMAE-final-project" target="_blank"
+                                    <h3 class="project-title">STMAE</h3>
+                                    <a class="project-link-btn" href="https://github.com/zabayone/STMAE-final-project" aria-label="View STMAE source code" target="_blank"
                                         rel="noopener noreferrer"><ion-icon name="link-outline"></ion-icon></a>
                                 </div>
                                 <p class="project-category">Music Information Retrieval</p>
+                                <p class="project-summary">Training a machine learning model to classify urban environmental sounds.</p>
                             </div>
                         </li>
                     
                         <li class="project-item active" data-filter-item data-category="Acoustics">
                             <div class="project-card">
-                                <button class="project-image-btn" data-open-project="roomacoustics" type="button">
+                                <button class="project-image-btn" data-open-project="roomacoustics" type="button" aria-label="Read about Room Acoustics">
                                     <figure class="project-img">
                                         <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
                                         <picture>
-                                            <source type="image/webp" srcset="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/roomac_dark.webp">
-                                            <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/roomac_dark.png"
+                                            <source type="image/webp" srcset="Media/roomac_dark.webp">
+                                            <img src="Media/roomac_dark.png"
                                                 alt="Room Acoustics" loading="lazy" decoding="async" width="600" height="335">
                                         </picture>
                                     </figure>
                                 </button>
                                 <div class="project-header">
-                                    <h3 class="project-title">Room Acoustics - Final Project</h3>
+                                    <h3 class="project-title">Room Acoustics</h3>
                                     <a class="project-link-btn"
-                                        href="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/RoomAcoustics.pdf"
+                                        href="Media/RoomAcoustics.pdf" aria-label="Open the Room Acoustics report"
                                         target="_blank" rel="noopener noreferrer"><ion-icon name="link-outline"></ion-icon></a>
                                 </div>
                                 <p class="project-category">Acoustics</p>
+                                <p class="project-summary">Room measurement, analysis and acoustic design in practice.</p>
                             </div>
                         </li>
                     
                         <li class="project-item active" data-filter-item data-category="Sound Design">
                             <div class="project-card">
-                                <button class="project-image-btn" data-open-project="electroacoustic" type="button">
+                                <button class="project-image-btn" data-open-project="electroacoustic" type="button" aria-label="Read about Electroacoustic Composition">
                                     <figure class="project-img">
                                         <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
                                         <picture>
-                                            <source type="image/webp" srcset="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/etrcomp_dark.webp">
-                                            <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/etrcomp_dark.png"
+                                            <source type="image/webp" srcset="Media/etrcomp_dark.webp">
+                                            <img src="Media/etrcomp_dark.png"
                                                 alt="Electroacoustic Composition" loading="lazy" decoding="async" width="600" height="335">
                                         </picture>
                                     </figure>
                                 </button>
                                 <div class="project-header">
-                                    <h3 class="project-title">Electroacoustic Composition - Final Project</h3>
+                                    <h3 class="project-title">Electroacoustic Composition</h3>
                                     <a class="project-link-btn"
-                                        href="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/ElectroacousticComposition.zip"
+                                        href="Media/ElectroacousticComposition.zip" aria-label="Download the Electroacoustic Composition files"
                                         target="_blank" rel="noopener noreferrer"><ion-icon name="link-outline"></ion-icon></a>
                                 </div>
                                 <p class="project-category">Sound Design</p>
+                                <p class="project-summary">A composition built through electronic sound design and production.</p>
                             </div>
                         </li>
                     
                         <li class="project-item active" data-filter-item data-category="Sound Design">
                             <div class="project-card">
-                                <button class="project-image-btn" data-open-project="mpt" type="button">
+                                <button class="project-image-btn" data-open-project="mpt" type="button" aria-label="Read about Music Production Technologies">
                                     <figure class="project-img">
                                         <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
                                         <picture>
-                                            <source type="image/webp" srcset="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/mpt_dark.webp">
-                                            <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/mpt_dark.png"
+                                            <source type="image/webp" srcset="Media/mpt_dark.webp">
+                                            <img src="Media/mpt_dark.png"
                                                 alt="Music Production Technologies" loading="lazy" decoding="async" width="600" height="335">
                                         </picture>
                                     </figure>
                                 </button>
                                 <div class="project-header">
-                                    <h3 class="project-title">Music Production Technologies - Final Project</h3>
-                                    <a class="project-link-btn" href="https://www.youtube.com/watch?v=wJQDhbMxOgw" target="_blank"
+                                    <h3 class="project-title">Music Production Technologies</h3>
+                                    <a class="project-link-btn" href="https://www.youtube.com/watch?v=wJQDhbMxOgw" aria-label="Watch the Music Production Technologies video" target="_blank"
                                         rel="noopener noreferrer"><ion-icon name="link-outline"></ion-icon></a>
                                 </div>
                                 <p class="project-category">Sound Design</p>
+                                <p class="project-summary">Original sound and music production synchronized to picture.</p>
                             </div>
                         </li>
                     
                         <li class="project-item active" data-filter-item data-category="Creative Programming, Music Information Retrieval">
                             <div class="project-card">
-                                <button class="project-image-btn" data-open-project="emotions" type="button">
+                                <button class="project-image-btn" data-open-project="emotions" type="button" aria-label="Read about Emotions to Color">
                                     <figure class="project-img">
                                         <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
                                         <picture>
-                                            <source type="image/webp" srcset="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/etc_dark.webp">
-                                            <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/etc_dark.png"
+                                            <source type="image/webp" srcset="Media/etc_dark.webp">
+                                            <img src="Media/etc_dark.png"
                                                 alt="Emotions to Color" loading="lazy" decoding="async" width="600" height="335">
                                         </picture>
                                     </figure>
                                 </button>
                                 <div class="project-header">
-                                    <h3 class="project-title">Emotions to Color - Palette generator</h3>
-                                    <a class="project-link-btn" href="https://github.com/zabayone/EmotionsToColor" target="_blank"
+                                    <h3 class="project-title">Emotions to Color</h3>
+                                    <a class="project-link-btn" href="https://github.com/zabayone/EmotionsToColor" aria-label="View Emotions to Color source code" target="_blank"
                                         rel="noopener noreferrer"><ion-icon name="link-outline"></ion-icon></a>
                                 </div>
                                 <p class="project-category">Creative Programming, Music Information Retrieval</p>
+                                <p class="project-summary">Turning a short emotional description into a perceptually tuned color palette.</p>
                             </div>
                         </li>
                     
@@ -438,11 +456,12 @@
             <div class="project-modal-container" data-project-modal-container>
                 <div class="overlay" data-project-overlay></div>
             
-                <section class="project-modal">
-                    <button class="modal-close-btn" data-project-close-btn aria-label="Close project article">
+                <section class="project-modal" role="dialog" aria-modal="true" aria-labelledby="project-modal-title" tabindex="-1">
+                    <button class="modal-close-btn" data-project-close-btn type="button" aria-label="Close project details">
                         <ion-icon name="close-outline"></ion-icon>
                     </button>
             
+                    <h2 class="sr-only" id="project-modal-title">Project details</h2>
                     <div class="project-modal-content" id="project-modal-content"></div>
                 </section>
             </div>
@@ -472,8 +491,8 @@
             <template id="project-earbuddy">
                 <div class="project-article">
                     <picture>
-                        <source type="image/webp" srcset="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/eb_dark.webp">
-                        <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/eb_dark.png" alt="Ear Buddy cover" decoding="async">
+                        <source type="image/webp" srcset="Media/eb_dark.webp">
+                        <img src="Media/eb_dark.png" alt="Ear Buddy cover" decoding="async">
                     </picture>
                     <span class="project-article-tag">Creative Programming</span>
                     <h2>Ear Buddy</h2>
@@ -504,7 +523,7 @@
             
                     <h3>Find out more</h3>
                     <p>
-                        The Github repository can be found at <a href="https://github.com/zabayone/Actam_Project" class="link" target="_blank" rel="noopener noreferrer">https://github.com/zabayone/Actam_Project</a> and includes the source code and a link to the hosted version.
+                        The GitHub repository can be found at <a href="https://github.com/zabayone/Actam_Project" class="link" target="_blank" rel="noopener noreferrer">https://github.com/zabayone/Actam_Project</a> and includes the source code and a link to the hosted version.
                     </p>
                 </div>
             </template>
@@ -512,8 +531,8 @@
             <template id="project-tiles">
                 <div class="project-article">
                     <picture>
-                        <source type="image/webp" srcset="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/tiles_dark.webp">
-                        <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/tiles_dark.png" alt="T.I.L.E.S. cover" decoding="async">
+                        <source type="image/webp" srcset="Media/tiles_dark.webp">
+                        <img src="Media/tiles_dark.png" alt="T.I.L.E.S. cover" decoding="async">
                     </picture>
                     <span class="project-article-tag">Creative Programming</span>
                     <span class="project-article-tag">Digital Signal Processing</span>
@@ -544,7 +563,7 @@
             
                     <h3>Find out more</h3>
                     <p>
-                        The Github repository can be found at <a href="https://github.com/zabayone/international-love" class="link" target="_blank" rel="noopener noreferrer">https://github.com/zabayone/international-love</a> and includes the source code for the software components, as well as documentation of the hardware design and implementation.
+                        The GitHub repository can be found at <a href="https://github.com/zabayone/international-love" class="link" target="_blank" rel="noopener noreferrer">https://github.com/zabayone/international-love</a> and includes the source code for the software components, as well as documentation of the hardware design and implementation.
                     </p>
                 </div>
             </template>
@@ -552,11 +571,11 @@
             <template id="project-stmae">
                 <div class="project-article">
                     <picture>
-                        <source type="image/webp" srcset="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/stmae_dark.webp">
-                        <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/stmae_dark.png" alt="STMAE cover" decoding="async">
+                        <source type="image/webp" srcset="Media/stmae_dark.webp">
+                        <img src="Media/stmae_dark.png" alt="STMAE cover" decoding="async">
                     </picture>
                     <span class="project-article-tag">Music Information Retrieval</span>
-                    <h2>STMAE - Final project</h2>
+                    <h2>STMAE: Urban sound classification</h2>
                     <p>
                         This project is the final assignment for the Selected Topics in Music and Acoustic Engineering course, focused on Machine Learning and Music Information Retrieval. The project consists of a ML model to recognize and classify ambient sounds.
                     </p>
@@ -582,7 +601,7 @@
             
                     <h3>Find out more</h3>
                     <p>
-                        The Github repository can be found at <a href="https://github.com/zabayone/STMAE-final-project" class="link" target="_blank" rel="noopener noreferrer">https://github.com/zabayone/STMAE-final-project</a> and includes the source code for the software components, as well as documentation of the design and implementation.
+                        The GitHub repository can be found at <a href="https://github.com/zabayone/STMAE-final-project" class="link" target="_blank" rel="noopener noreferrer">https://github.com/zabayone/STMAE-final-project</a> and includes the source code for the software components, as well as documentation of the design and implementation.
                     </p>
                 </div>
             </template>
@@ -590,12 +609,12 @@
             <template id="project-roomacoustics">
                 <div class="project-article">
                     <picture>
-                        <source type="image/webp" srcset="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/roomac_dark.webp">
-                        <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/roomac_dark.png"
+                        <source type="image/webp" srcset="Media/roomac_dark.webp">
+                        <img src="Media/roomac_dark.png"
                             alt="Room Acoustics cover" decoding="async">
                     </picture>
                     <span class="project-article-tag">Acoustics</span>
-                    <h2>Room Acoustics - Final Project</h2>
+                    <h2>Room Acoustics</h2>
                     <p>
                         This project is the final assignment for the Room Acoustics course, focused on the analysis and design of acoustic spaces. The project consists of a comprehensive study of the acoustic characteristics of a specific environment, with the aim of understanding how to optimize its sound quality.
                     </p>
@@ -628,12 +647,12 @@
             <template id="project-electroacoustic">
                 <div class="project-article">
                     <picture>
-                        <source type="image/webp" srcset="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/etrcomp_dark.webp">
-                        <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/etrcomp_dark.png"
+                        <source type="image/webp" srcset="Media/etrcomp_dark.webp">
+                        <img src="Media/etrcomp_dark.png"
                             alt="Electroacoustic Composition cover" decoding="async">
                     </picture>
                     <span class="project-article-tag">Sound Design</span>
-                    <h2>Electroacoustic Composition - Final Project</h2>
+                    <h2>Electroacoustic Composition</h2>
                     <p>
                         This project is dedicated to electroacoustic composition and sound design, with attention to the
                         narrative construction of sound and the exploration of different synthesis techniques.
@@ -667,12 +686,12 @@
             <template id="project-mpt">
                 <div class="project-article">
                     <picture>
-                        <source type="image/webp" srcset="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/mpt_dark.webp">
-                        <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/mpt_dark.png"
+                        <source type="image/webp" srcset="Media/mpt_dark.webp">
+                        <img src="Media/mpt_dark.png"
                             alt="Music Production Technologies cover" decoding="async">
                     </picture>
                     <span class="project-article-tag">Sound Design</span>
-                    <h2>Music Production Technologies - Final Project</h2>
+                    <h2>Music Production Technologies</h2>
                     <p>
                         This project is focused on music production technologies, with an emphasis on the creative and technical aspects of producing a track. The project involves the creation of a commercial sound track, consisting of the music, sound effects and background sounds.
                     </p>
@@ -708,20 +727,20 @@
             <template id="project-emotions">
                 <div class="project-article">
                     <picture>
-                        <source type="image/webp" srcset="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/etc_dark.webp">
-                        <img src="https://raw.githubusercontent.com/zabayone/Portfolio/main/Media/etc_dark.png"
+                        <source type="image/webp" srcset="Media/etc_dark.webp">
+                        <img src="Media/etc_dark.png"
                             alt="Emotions to Color cover" decoding="async">
                     </picture>
                     <span class="project-article-tag">Creative Programming</span>
                     <span class="project-article-tag">Music Information Retrieval</span>
-                    <h2>Emotions to Color - Palette generator</h2>
+                    <h2>Emotions to Color</h2>
                     <p>
                         This project is a palette generator that translates emotional aspects of the musical experience into a synthetic visual representation. It is a work that sits at the intersection of data interpretation, creative coding, and interactive design.
                     </p>
             
                     <h3>Presentation</h3>
                     <p>
-                        This is an independent creative programming and music information retrieval project. It explores how a short emotional description can be translated into a color palette; it is separate from my current master's thesis, ObjSplat.
+                        This is an independent creative programming and music information retrieval project. It explores how a short emotional description can be translated into a color palette.
                     </p>
                     <p>
                         To achieve this, I designed a machine learning model to generate a color palette from a text input describing the emotional content of the music. The model is trained on two datasets of color palettes, one featuring comments and one with tags, the two are concatenated and given to the model with different weights. 
@@ -747,7 +766,7 @@
             
                     <h3>Find out more</h3>
                     <p>
-                        The Github repository can be found at <a href="https://github.com/zabayone/Emotions-to-Color" class="link" target="_blank" rel="noopener noreferrer">https://github.com/zabayone/Emotions-to-Color</a>. It includes the source code for the model, as well as documentation of the design and implementation process, and examples of generated palettes based on different emotional inputs.
+                        The GitHub repository can be found at <a href="https://github.com/zabayone/Emotions-to-Color" class="link" target="_blank" rel="noopener noreferrer">https://github.com/zabayone/Emotions-to-Color</a>. It includes the source code for the model, as well as documentation of the design and implementation process, and examples of generated palettes based on different emotional inputs.
                     </p>
                 </div>
             </template>
@@ -755,25 +774,12 @@
                 <header>
                     <h2 class="h2 article-title">Contact</h2>
                 </header>
-                <section class="mapbox" data-mapbox>
-                    <figure>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.783355961679!2d9.511093575853797!3d45.314012471073735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4781206facbeab83%3A0xf0c6ee91a9c2ea38!2sLodi,%20Italy!5e0!3m2!1sen!2sit!4v1701000000000!5m2!1sen!2sit"
-                            width="400" height="300" loading="lazy"></iframe>
-                    </figure>
-                </section>
-                <section class="contact-form">
-                    <h3 class="h3 form-title">Contact Form</h3>
-                    <form action="#" class="form" data-form>
-                        <div class="input-wrapper">
-                            <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-                            <input type="email" name="email" class="form-input" placeholder="Email Address" required data-form-input>
-                        </div>
-                        <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-                        <button class="form-btn" type="submit" disabled data-form-btn>
-                            <ion-icon name="paper-plane"></ion-icon>
-                            <span>Send Message</span>
-                        </button>
-                    </form>
+                <section class="contact-panel">
+                    <p class="eyebrow">Let's collaborate</p>
+                    <h3>Have a project in mind?</h3>
+                    <p>I'm interested in sound design, acoustic engineering, interactive audio and creative technology. Send me a note about what you're building.</p>
+                    <a class="primary-action" href="mailto:nespolinicola5@gmail.com?subject=Portfolio%20enquiry">Email Nicola <span aria-hidden="true">↗</span></a>
+                    <a class="contact-direct" href="https://www.linkedin.com/in/nicola-nespoli-1ba6a7151" target="_blank" rel="noopener noreferrer">Connect on LinkedIn <span aria-hidden="true">→</span></a>
                 </section>
             </article>
         </div>

@@ -1,180 +1,155 @@
-// Original design: https://codepen.io/leonam-silva-de-souza/pen/vYowKqP
-
 'use strict';
 
-// Opening or closing side bar
-const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
+const sidebar = document.querySelector('[data-sidebar]');
+const sidebarBtn = document.querySelector('[data-sidebar-btn]');
+sidebarBtn.addEventListener('click', () => {
+    const expanded = sidebar.classList.toggle('active');
+    sidebarBtn.setAttribute('aria-expanded', String(expanded));
+    sidebarBtn.querySelector('span').textContent = expanded ? 'Hide Contacts' : 'Show Contacts';
+});
 
-const sidebar = document.querySelector("[data-sidebar]");
-const sidebarBtn = document.querySelector("[data-sidebar-btn]");
-sidebarBtn.addEventListener("click", function() { elementToggleFunc(sidebar); });
+const pages = [...document.querySelectorAll('[data-page]')];
+const navLinks = [...document.querySelectorAll('[data-nav-link]')];
+const pageNames = pages.map(page => page.dataset.page);
 
-// Activating Filter Select and filtering options
+function showPage(name, updateHistory = true) {
+    const pageName = pageNames.includes(name) ? name : 'about';
+    pages.forEach(page => page.classList.toggle('active', page.dataset.page === pageName));
+    navLinks.forEach(link => {
+        const label = link.textContent.trim().toLowerCase();
+        const active = (label === 'projects' ? 'portfolio' : label) === pageName;
+        link.classList.toggle('active', active);
+        if (active) link.setAttribute('aria-current', 'page');
+        else link.removeAttribute('aria-current');
+    });
+    if (updateHistory) history.replaceState(null, '', `#${pageName}`);
+    window.scrollTo({ top: 0, behavior: 'auto' });
+}
+
+navLinks.forEach(link => link.addEventListener('click', () => {
+    const name = link.textContent.trim().toLowerCase();
+    showPage(name === 'projects' ? 'portfolio' : name);
+}));
+document.querySelectorAll('[data-go-to]').forEach(button => {
+    button.addEventListener('click', () => showPage(button.dataset.goTo));
+});
+window.addEventListener('hashchange', () => showPage(location.hash.slice(1), false));
+showPage(location.hash.slice(1), false);
+
+const filterItems = [...document.querySelectorAll('[data-filter-item]')];
+const filterButtons = [...document.querySelectorAll('[data-filter-btn]')];
 const select = document.querySelector('[data-select]');
-const selectItems = document.querySelectorAll('[data-select-item]');
 const selectValue = document.querySelector('[data-select-value]');
-const filterBtn = document.querySelectorAll('[data-filter-btn]');
 
-select.addEventListener('click', function () { elementToggleFunc(this); });
-
-for (let i = 0; i < selectItems.length; i++) {
-    selectItems[i].addEventListener('click', function() {
-        let selectedValue = this.innerText.toLowerCase();
-        selectValue.innerText = this.innerText;
-        elementToggleFunc(select);
-        filterFunc(selectedValue);
+function setFilter(value) {
+    const selected = value.toLowerCase();
+    filterItems.forEach(item => {
+        const categories = item.dataset.category.toLowerCase().split(',').map(category => category.trim());
+        item.classList.toggle('active', selected === 'all' || categories.includes(selected));
     });
+    filterButtons.forEach(button => button.classList.toggle('active', button.textContent.trim().toLowerCase() === selected));
+    selectValue.textContent = value;
+    select.classList.remove('active');
+    select.setAttribute('aria-expanded', 'false');
 }
 
-const filterItems = document.querySelectorAll('[data-filter-item]');
-
-const filterFunc = function (selectedValue) {
-    for (let i = 0; i < filterItems.length; i++) {
-        const categoryAttr = filterItems[i].dataset.category.toLowerCase();
-        if (selectedValue === "all" || categoryAttr.includes(selectedValue.toLowerCase())) {
-            filterItems[i].classList.add("active");
-        } else {
-            filterItems[i].classList.remove("active");
-        }
+filterButtons.forEach(button => button.addEventListener('click', () => setFilter(button.textContent.trim())));
+select.addEventListener('click', () => {
+    const expanded = select.classList.toggle('active');
+    select.setAttribute('aria-expanded', String(expanded));
+});
+document.querySelectorAll('[data-select-item]').forEach(button => {
+    button.addEventListener('click', () => setFilter(button.textContent.trim()));
+});
+document.addEventListener('click', event => {
+    if (!event.target.closest('.filter-select-box')) {
+        select.classList.remove('active');
+        select.setAttribute('aria-expanded', 'false');
     }
-};
+});
 
-let lastClickedBtn = filterBtn[0];
-for (let i = 0; i < filterBtn.length; i++) {
-    filterBtn[i].addEventListener('click', function() {
-        let selectedValue = this.innerText.toLowerCase();
-        selectValue.innerText = this.innerText;
-        filterFunc(selectedValue);
-        lastClickedBtn.classList.remove('active');
-        this.classList.add('active');
-        lastClickedBtn = this;
-    });
-}
-
-// Enabling Contact Form
-const form = document.querySelector('[data-form]');
-const formInputs = document.querySelectorAll('[data-form-input]');
-const formBtn = document.querySelector('[data-form-btn]');
-
-for (let i = 0; i < formInputs.length; i++) {
-    formInputs[i].addEventListener('input', function () {
-        if (form.checkValidity()) {
-            formBtn.removeAttribute('disabled');
-        } else {
-            formBtn.setAttribute('disabled', '');
-        }
-    });
-}
-
-// Enabling Page Navigation
-const navigationLinks = document.querySelectorAll('[data-nav-link]');
-const pages = document.querySelectorAll('[data-page]');
-
-for (let i = 0; i < navigationLinks.length; i++) {
-    navigationLinks[i].addEventListener('click', function() {
-        for (let i = 0; i < pages.length; i++) {
-            if (this.innerHTML.toLowerCase() == pages[i].dataset.page) {
-                pages[i].classList.add('active');
-                navigationLinks[i].classList.add('active');
-                window.scrollTo(0, 0);
-            } else {
-                pages[i].classList.remove('active');
-                navigationLinks[i].classList.remove('active');
-            }
-        }
-    });
-}
-
-// Theme Toggle Functionality
-const themeToggleBtn = document.querySelector('[data-theme-toggle]');
+const themeToggle = document.querySelector('[data-theme-toggle]');
 const themeIcon = document.querySelector('.theme-icon');
 
-// Update project images based on current theme
-const updateProjectImages = () => {
-    const isDark = !document.body.classList.contains('light-mode');
+function updateProjectImages() {
+    const variant = document.body.classList.contains('light-mode') ? 'light' : 'dark';
     document.querySelectorAll('.project-img img').forEach(img => {
         if (img.dataset.themeDark && img.dataset.themeLight) {
-            img.src = isDark ? img.dataset.themeDark : img.dataset.themeLight;
+            img.src = img.dataset[variant === 'dark' ? 'themeDark' : 'themeLight'];
             return;
         }
         const picture = img.closest('picture');
-        if (picture) {
-            picture.querySelectorAll('source').forEach(source => {
-                if (isDark) {
-                    if (!source.srcset.includes('_dark')) {
-                        source.srcset = source.srcset.replace(/\.(webp)$/i, '_dark.$1');
-                    }
-                } else {
-                    source.srcset = source.srcset.replace(/_dark(\.webp)$/i, '$1');
-                }
-            });
-        }
-        if (isDark) {
-            if (!img.src.includes('_dark')) {
-                img.src = img.src.replace(/\.png$/i, '_dark.png');
-            }
-        } else {
-            img.src = img.src.replace('_dark.png', '.png');
+        const source = picture?.querySelector('source');
+        const darkSrc = img.dataset.darkSrc || img.getAttribute('src');
+        img.dataset.darkSrc = darkSrc;
+        img.src = variant === 'dark' ? darkSrc : darkSrc.replace('_dark.png', '.png');
+        if (source) {
+            const darkSet = source.dataset.darkSrcset || source.getAttribute('srcset');
+            source.dataset.darkSrcset = darkSet;
+            source.srcset = variant === 'dark' ? darkSet : darkSet.replace('_dark.webp', '.webp');
         }
     });
-};
-
-// Check saved theme preference
-const currentTheme = localStorage.getItem('theme');
-if (currentTheme === 'light') {
-    document.body.classList.add('light-mode');
-    themeIcon.name = 'sunny-outline';
 }
 
-// Single listener for the theme toggle
-themeToggleBtn.addEventListener('click', function () {
-    document.body.classList.toggle('light-mode');
-    if (document.body.classList.contains('light-mode')) {
-        themeIcon.name = 'sunny-outline';
-        localStorage.setItem('theme', 'light');
-    } else {
-        themeIcon.name = 'moon-outline';
-        localStorage.setItem('theme', 'dark');
-    }
+function applyTheme(theme) {
+    const light = theme === 'light';
+    document.body.classList.toggle('light-mode', light);
+    themeIcon.name = light ? 'sunny-outline' : 'moon-outline';
+    themeToggle.setAttribute('aria-label', `Switch to ${light ? 'dark' : 'light'} theme`);
     updateProjectImages();
+}
+
+applyTheme(localStorage.getItem('theme') || 'dark');
+themeToggle.addEventListener('click', () => {
+    const theme = document.body.classList.contains('light-mode') ? 'dark' : 'light';
+    localStorage.setItem('theme', theme);
+    applyTheme(theme);
 });
 
-// Apply theme on page load
-updateProjectImages();
+const modalContainer = document.querySelector('[data-project-modal-container]');
+const modal = modalContainer.querySelector('.project-modal');
+const modalContent = document.getElementById('project-modal-content');
+const modalClose = document.querySelector('[data-project-close-btn]');
+let modalTrigger = null;
 
-/* ===== PROJECT ARTICLES MODAL ===== */
-const projectOpenButtons = document.querySelectorAll("[data-open-project]");
-const projectModalContainer = document.querySelector("[data-project-modal-container]");
-const projectOverlay = document.querySelector("[data-project-overlay]");
-const projectCloseBtn = document.querySelector("[data-project-close-btn]");
-const projectModalContent = document.getElementById("project-modal-content");
-
-if (projectOpenButtons.length && projectModalContainer && projectOverlay && projectCloseBtn && projectModalContent) {
-    const openProjectModal = (projectId) => {
-        const template = document.getElementById(`project-${projectId}`);
-        if (!template) return;
-        projectModalContent.innerHTML = "";
-        projectModalContent.appendChild(template.content.cloneNode(true));
-        projectModalContainer.classList.add("active");
-        document.body.style.overflow = "hidden";
-    };
-
-    const closeProjectModal = () => {
-        projectModalContainer.classList.remove("active");
-        projectModalContent.innerHTML = "";
-        document.body.style.overflow = "";
-    };
-
-    projectOpenButtons.forEach((button) => {
-        button.addEventListener("click", () => openProjectModal(button.dataset.openProject));
-    });
-
-    projectCloseBtn.addEventListener("click", closeProjectModal);
-    projectOverlay.addEventListener("click", closeProjectModal);
-
-    document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape" && projectModalContainer.classList.contains("active")) {
-            closeProjectModal();
-        }
-    });
+function closeProject() {
+    modalContainer.classList.remove('active');
+    modalContent.replaceChildren();
+    document.body.style.overflow = '';
+    modalTrigger?.focus();
+    modalTrigger = null;
 }
+
+document.querySelectorAll('[data-open-project]').forEach(button => {
+    button.addEventListener('click', () => {
+        const template = document.getElementById(`project-${button.dataset.openProject}`);
+        if (!template) return;
+        modalTrigger = button;
+        modalContent.replaceChildren(template.content.cloneNode(true));
+        modalContainer.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        modal.scrollTop = 0;
+        modalClose.focus();
+    });
+});
+
+modalClose.addEventListener('click', closeProject);
+document.querySelector('[data-project-overlay]').addEventListener('click', closeProject);
+document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') {
+        if (modalContainer.classList.contains('active')) closeProject();
+        select.classList.remove('active');
+        select.setAttribute('aria-expanded', 'false');
+    }
+    if (event.key !== 'Tab' || !modalContainer.classList.contains('active')) return;
+    const focusable = [...modal.querySelectorAll('button, a[href]')];
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+    }
+});
