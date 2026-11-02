@@ -33,8 +33,6 @@ navLinks.forEach(link => link.addEventListener('click', () => {
 document.querySelectorAll('[data-go-to]').forEach(button => {
     button.addEventListener('click', () => showPage(button.dataset.goTo));
 });
-window.addEventListener('hashchange', () => showPage(location.hash.slice(1), false));
-showPage(location.hash.slice(1), false);
 
 const filterItems = [...document.querySelectorAll('[data-filter-item]')];
 const filterButtons = [...document.querySelectorAll('[data-filter-btn]')];
@@ -112,29 +110,38 @@ const modalContent = document.getElementById('project-modal-content');
 const modalClose = document.querySelector('[data-project-close-btn]');
 let modalTrigger = null;
 
-function closeProject() {
+function closeProject(updateHistory = true) {
+    modalContent.querySelectorAll('audio').forEach(audio => audio.pause());
     modalContainer.classList.remove('active');
     modalContent.replaceChildren();
     document.body.style.overflow = '';
     modalTrigger?.focus();
     modalTrigger = null;
+    if (updateHistory && location.hash.startsWith('#project-')) {
+        history.replaceState(null, '', '#portfolio');
+    }
+}
+
+function openProject(name, trigger = null, updateHistory = true) {
+    const template = document.getElementById(`project-${name}`);
+    if (!template) return false;
+    modalContent.querySelectorAll('audio').forEach(audio => audio.pause());
+    modalTrigger = trigger || document.querySelector(`[data-open-project="${name}"]`);
+    modalContent.replaceChildren(template.content.cloneNode(true));
+    modalContainer.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    modal.scrollTop = 0;
+    modalClose.focus();
+    if (updateHistory) history.replaceState(null, '', `#project-${name}`);
+    return true;
 }
 
 document.querySelectorAll('[data-open-project]').forEach(button => {
-    button.addEventListener('click', () => {
-        const template = document.getElementById(`project-${button.dataset.openProject}`);
-        if (!template) return;
-        modalTrigger = button;
-        modalContent.replaceChildren(template.content.cloneNode(true));
-        modalContainer.classList.add('active');
-        document.body.style.overflow = 'hidden';
-        modal.scrollTop = 0;
-        modalClose.focus();
-    });
+    button.addEventListener('click', () => openProject(button.dataset.openProject, button));
 });
 
-modalClose.addEventListener('click', closeProject);
-document.querySelector('[data-project-overlay]').addEventListener('click', closeProject);
+modalClose.addEventListener('click', () => closeProject());
+document.querySelector('[data-project-overlay]').addEventListener('click', () => closeProject());
 document.addEventListener('keydown', event => {
     if (event.key === 'Escape') {
         if (modalContainer.classList.contains('active')) closeProject();
@@ -142,7 +149,7 @@ document.addEventListener('keydown', event => {
         select.setAttribute('aria-expanded', 'false');
     }
     if (event.key !== 'Tab' || !modalContainer.classList.contains('active')) return;
-    const focusable = [...modal.querySelectorAll('button, a[href]')];
+    const focusable = [...modal.querySelectorAll('button, a[href], audio[controls]')];
     const first = focusable[0];
     const last = focusable[focusable.length - 1];
     if (event.shiftKey && document.activeElement === first) {
@@ -153,3 +160,17 @@ document.addEventListener('keydown', event => {
         first.focus();
     }
 });
+
+function showLocation() {
+    const name = location.hash.slice(1);
+    closeProject(false);
+    if (name.startsWith('project-')) {
+        showPage('portfolio', false);
+        openProject(name.slice('project-'.length), null, false);
+    } else {
+        showPage(name, false);
+    }
+}
+
+window.addEventListener('hashchange', showLocation);
+showLocation();
